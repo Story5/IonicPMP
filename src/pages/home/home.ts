@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { PhotoLibrary } from '@ionic-native/photo-library';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +10,7 @@ import { PhotoLibrary } from '@ionic-native/photo-library';
 export class HomePage {
   
 
-  constructor(public navCtrl: NavController,public camera: Camera,public photoLibrary: PhotoLibrary) {
+  constructor(public navCtrl: NavController,public camera: Camera) {
 
   }
 
@@ -41,11 +40,10 @@ export class HomePage {
     this.camera.getPicture(options).then((imageData) => {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64:
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
+      // let base64Image = 'data:image/jpeg;base64,' + imageData;
       let iframe = document.getElementById("mainframe");
       var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
       iWindow.postMessage("getPicValue:" + imageData, "*");
-      // postImage(imageData);
     }, (err) => {
       // Handl
     });

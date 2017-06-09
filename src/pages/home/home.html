@@ -1,57 +1,8 @@
 <ion-content scroll="true" overflow-scroll="true">
-  <p>
-    <button ion-button (click)="takePhoto()">takePhoto</button>
-  </p>
-  <p>
-    <button ion-button (click)="choosePhoto()">choosePhoto</button>
-  </p>
-  <p>
-    <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]" (change)="processWebImage($event)" />
-  </p>
   <iframe
     name="mainFrame" id="mainframe"
     src="http://180.168.168.210:8010/mobile/Login.html"
     class="width-100 height-100"
     style="position: absolute; min-width: 100%; min-height: 100%; z-index: 99;">
   </iframe>
-  <script>
-	//����������
-	function openCamera() {
-    alert("openCamera");
-		var options = {
-			quality : 100,//ͼ������ 
-			destinationType : Camera.DestinationType.DATA_URL,//������������
-			sourceType : Camera.PictureSourceType.CAMERA,//ͼ����Դ 
-			allowEdit : false,//ͼ���ڷ���ǰ�Ƿ����Ա༭
-			encodingType : Camera.EncodingType.JPEG,//ͼ�񱣴���ʽ
-			//targetWidth : 1200,//ͼƬ�Ŀ���
-			//targetHeight : 1600,//ͼƬ�ĸ߶�
-			popoverOptions : CameraPopoverOptions,
-			saveToPhotoAlbum : false//ͼƬ�Ƿ񱣴��ڱ���
-		};
-		navigator.camera.getPicture(function(imageData) {
-			//alert(imageData);
-			document.getElementById("mainframe").contentWindow.postMessage(
-					"getPicValue:" + imageData, "*");
-
-		}, function(err) {
-			//alert("Camera open failed: " + err);
-			alert("ȡ������","��ʾ");
-		}, options);
-	}
-		//http://101.231.116.46:9280
-	//http://180.168.168.210:802
-	window.addEventListener("message", function(e) {
-    alert("message");
-		if (e.data == "getewmvalue") {
-			inputScan();
-		} else if (e.data == "getPicValue") {
-			openCamera();
-		} else if (e.data.indexOf("set_jPushTags") > -1) {
-			set_jPushTags(e.data.split('|')[1]);
-		} else if (e.data.indexOf("set_jPushAlias") > -1) {
-			set_jPushAlias(e.data.split('|')[1]);
-		}
-	}, false);
-</script>
 </ion-content>
