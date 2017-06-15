@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Broadcaster } from '@ionic-native/broadcaster';
 
 @Component({
   selector: 'page-home',
@@ -10,7 +11,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 export class HomePage {
   
 
-  constructor(public navCtrl: NavController,public camera: Camera) {
+  constructor(public navCtrl: NavController,public camera: Camera,public broadcaster : Broadcaster) {
 
   }
 
@@ -19,8 +20,8 @@ export class HomePage {
       if (e.data == "getewmvalue") {
         // inputScan();
       } else if (e.data == "getPicValue") {
-        this.takePhoto();
-        // openCamera();
+        // this.takePhoto();
+        this.pushAndroidActivity();
       } else if (e.data.indexOf("set_jPushTags") > -1) {
         // set_jPushTags(e.data.split('|')[1]);
       } else if (e.data.indexOf("set_jPushAlias") > -1) {
@@ -47,5 +48,19 @@ export class HomePage {
     }, (err) => {
       // Handl
     });
+  }
+
+  pushAndroidActivity() {
+    // Send event to Native
+    alert("start broadcaster");
+    this.broadcaster.fireNativeEvent('openDevice', {item:'test data'}).then(() => { 
+      console.log('success');
+      alert('fireNativeEvent');
+    });
+  }
+
+  backToIonic() {
+    // Listen to events from Native
+    this.broadcaster.addEventListener('backIonic').subscribe((event) => console.log(event));
   }
 }
