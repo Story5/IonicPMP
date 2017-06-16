@@ -61,7 +61,8 @@ export class HomePage {
     .then(result => {
       let iframe = document.getElementById("mainframe");
       var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
-      iWindow.postMessage("getewmvalue:" + result.text, "*"); // Scanned code
+      iWindow.postMessage("getewmvalue:" + result.text, "*");
+      // iWindow.postMessage(result, "*");
     })
     .catch(error => {
       alert("Scanning failed: " + error); // Error message
