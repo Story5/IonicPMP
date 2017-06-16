@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 import { Broadcaster } from '@ionic-native/broadcaster';
 
 @Component({
@@ -11,14 +12,14 @@ import { Broadcaster } from '@ionic-native/broadcaster';
 export class HomePage {
   
 
-  constructor(public navCtrl: NavController,public camera: Camera,public broadcaster : Broadcaster) {
+  constructor(public navCtrl: NavController,public camera: Camera,public zbar: ZBar,public broadcaster : Broadcaster) {
 
   }
 
   ngOnInit() {
     window.addEventListener("message", (e) => {
       if (e.data == "getewmvalue") {
-        // inputScan();
+        this.scan2dBarcodes ();
       } else if (e.data == "getPicValue") {
         // this.takePhoto();
         this.pushAndroidActivity();
@@ -50,17 +51,38 @@ export class HomePage {
     });
   }
 
+  scan2dBarcodes () {
+    let options: ZBarOptions = {
+      flash: 'off',
+      drawSight: false
+    };
+
+    this.zbar.scan(options)
+    .then(result => {
+      let iframe = document.getElementById("mainframe");
+      var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
+      iWindow.postMessage("getewmvalue:" + result.text, "*"); // Scanned code
+    })
+    .catch(error => {
+      alert("Scanning failed: " + error); // Error message
+    });
+  }
+
   pushAndroidActivity() {
     // Send event to Native
-    alert("start broadcaster");
+    alert("start fireNativeEvent");
     this.broadcaster.fireNativeEvent('openDevice', {item:'test data'}).then(() => { 
       console.log('success');
-      alert('fireNativeEvent');
+      alert('success fireNativeEvent');
     });
   }
 
   backToIonic() {
     // Listen to events from Native
-    this.broadcaster.addEventListener('backIonic').subscribe((event) => console.log(event));
+    alert("start addEventListener");
+    this.broadcaster.addEventListener('backIonic').subscribe((event) => {
+      console.log(event);
+      alert('success addEventListener');
+    });
   }
 }
