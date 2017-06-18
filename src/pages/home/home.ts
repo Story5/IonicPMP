@@ -22,7 +22,8 @@ export class HomePage {
         this.scan2dBarcodes ();
       } else if (e.data == "getPicValue") {
         // this.takePhoto();
-        this.pushAndroidActivity();
+        this.scan2dBarcodes ();
+        // this.pushAndroidActivity();
       } else if (e.data.indexOf("set_jPushTags") > -1) {
         // set_jPushTags(e.data.split('|')[1]);
       } else if (e.data.indexOf("set_jPushAlias") > -1) {
@@ -62,6 +63,7 @@ export class HomePage {
       let iframe = document.getElementById("mainframe");
       var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
       iWindow.postMessage("getewmvalue:" + result.text, "*");
+      alert("Scanning success");
       // iWindow.postMessage(result, "*");
     })
     .catch(error => {
