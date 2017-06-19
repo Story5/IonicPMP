@@ -21,8 +21,8 @@ export class HomePage {
       if (e.data == "getewmvalue") {
         this.scan2dBarcodes ();
       } else if (e.data == "getPicValue") {
-        // this.takePhoto();
-        this.scan2dBarcodes ();
+        this.takePhoto();
+        // this.scan2dBarcodes ();
       } else if (e.data == "getVideo1") {
         this.pushAndroidActivity();
       } else if (e.data == "getVideo2") {
