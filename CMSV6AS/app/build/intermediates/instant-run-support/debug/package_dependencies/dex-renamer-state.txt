@@ -1,4 +1,4 @@
-#Mon Jun 19 11:17:42 CST 2017
+#Mon Jun 19 11:50:44 CST 2017
 base.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_f761e28c5034c0a90129b4982d5c5e8289c8bd9a
 renamed.0=classes.dex
 file.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_f761e28c5034c0a90129b4982d5c5e8289c8bd9a/classes.dex

@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="066e72a370dd8dcc860846d25ee905eb19bb3e47">
-        <dex dex="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_13189fa66882fdfcaee7a98a75deffe94c658142/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -30,6 +21,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="57b7366e7ab21e0bc3ab6df9e845c23f556ddced">
+        <dex dex="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_79e930a651dbb55f46ede83298c3749a2ffd2d66/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="282742b875a2eb9464d99f0914e272857c57d888">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_13189fa66882fdfcaee7a98a75deffe94c658142/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Story5/Story5/02Company/03BlueEarth/01视频监控/Code/Android/02CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
@@ -45,15 +54,6 @@
         revision="26.0.0"
         sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
         <dex dex="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_90bcc60f9c0613e016cbbc5ec5707a15615dcacc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="57b7366e7ab21e0bc3ab6df9e845c23f556ddced">
-        <dex dex="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_79e930a651dbb55f46ede83298c3749a2ffd2d66/classes.dex" />
     </item>
 
 </items>
