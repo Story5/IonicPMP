@@ -61,7 +61,10 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "jpush-phonegap-plugin": {
+                "APP_KEY": "fdf420b057c045f08ee7d5cb"
+            }
         },
         "platforms": [
             "android"

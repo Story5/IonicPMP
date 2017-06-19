@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:2:1-39:12
 	package
 		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:3:5-28
 		INJECTED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml
@@ -17,6 +17,18 @@ ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/A
 		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Story5/.android/build-cache/bdc8797eb6ac012c5c0405efd763e0bb1e5e7912/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Story5/.android/build-cache/4059949b8f63429a1f7395720325e628f39f1f08/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Story5/.android/build-cache/7944597bebaa85d7d34411b740c598e1033c3dc2/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Story5/.android/build-cache/3a30f4460d51400a7a101dc0c564347eda175599/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Story5/.android/build-cache/b3f7e84b65c88c5021ebd33a94e4ded1fb3c64f3/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Story5/.android/build-cache/b0bd6926f4eb83324b977482c33fb8b7414ad1eb/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Story5/.android/build-cache/b61550a5765125c1e05284b7a5f8befc8f93a1f5/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Story5/.android/build-cache/6a150e57bf1fa2c1e94f44504c6bc5adf044f793/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Story5/.android/build-cache/9959f21463041c310b43cd3fb9128c906cd86306/output/AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:9:9-38
 		INJECTED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml
@@ -26,7 +38,17 @@ ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/A
 		INJECTED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:11:5-25:19
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:11:5-29:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Story5/.android/build-cache/bdc8797eb6ac012c5c0405efd763e0bb1e5e7912/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Story5/.android/build-cache/4059949b8f63429a1f7395720325e628f39f1f08/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Story5/.android/build-cache/7944597bebaa85d7d34411b740c598e1033c3dc2/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Story5/.android/build-cache/3a30f4460d51400a7a101dc0c564347eda175599/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Story5/.android/build-cache/b3f7e84b65c88c5021ebd33a94e4ded1fb3c64f3/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Story5/.android/build-cache/b0bd6926f4eb83324b977482c33fb8b7414ad1eb/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Story5/.android/build-cache/b61550a5765125c1e05284b7a5f8befc8f93a1f5/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Story5/.android/build-cache/6a150e57bf1fa2c1e94f44504c6bc5adf044f793/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Story5/.android/build-cache/9959f21463041c310b43cd3fb9128c906cd86306/output/AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:14:9-41
 	android:allowBackup
@@ -51,11 +73,72 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:22:27-74
+provider#android.support.v4.content.FileProvider
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:25:9-27:20
+	android:authorities
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:25:19-66
+		INJECTED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml
+	android:grantUriPermissions
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:25:92-126
+	android:exported
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:25:67-91
+	android:name
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:25:127-181
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:26:13-116
+	android:resource
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:26:75-113
+	android:name
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:26:24-74
+activity#org.cloudsky.cordovaPlugins.ZBarScannerActivity
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:28:9-93
+	android:name
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:28:19-81
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:26:2-78
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:30:2-78
 	android:name
-		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:26:19-75
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:30:19-75
 uses-permission#android.permission.INTERNET
-ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:27:5-67
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:31:5-67
 	android:name
-		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:27:22-64
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:31:22-64
+uses-feature#android.hardware.camera
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:32:5-60
+	android:name
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:32:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:33:5-95
+	android:required
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:33:68-92
+	android:name
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:33:19-67
+uses-feature#android.hardware.camera.flash
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:34:5-91
+	android:required
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:34:64-88
+	android:name
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:34:19-63
+uses-feature#android.hardware.camera.front
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:35:5-91
+	android:required
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:35:64-88
+	android:name
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:35:19-63
+uses-permission#android.permission.CAMERA
+ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:36:5-65
+	android:name
+		ADDED from /Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/AndroidManifest.xml:36:22-62
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Story5/.android/build-cache/bdc8797eb6ac012c5c0405efd763e0bb1e5e7912/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Story5/.android/build-cache/4059949b8f63429a1f7395720325e628f39f1f08/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Story5/.android/build-cache/7944597bebaa85d7d34411b740c598e1033c3dc2/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Story5/.android/build-cache/3a30f4460d51400a7a101dc0c564347eda175599/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Story5/.android/build-cache/b3f7e84b65c88c5021ebd33a94e4ded1fb3c64f3/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Story5/.android/build-cache/b0bd6926f4eb83324b977482c33fb8b7414ad1eb/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Story5/.android/build-cache/b61550a5765125c1e05284b7a5f8befc8f93a1f5/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Story5/.android/build-cache/6a150e57bf1fa2c1e94f44504c6bc5adf044f793/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/AndroidManifest.xml:26:9-47

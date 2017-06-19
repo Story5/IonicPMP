@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/libs/zbar.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7bbdf7ba57a8a157c0cad51e455609c70887812e">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/2/zbar_6080bd53a201a6057a2ada7491b25f3dd39f11fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Story5/Story5/02Company/03BlueEarth/01视频监控/Code/Android/02CMSV6AS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -25,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="c24be3f2ea47e1b563822f90b334c671309697f1">
+        sha1="e6b40438e6a56d8b73ad31585af9e92ae4d4c84c">
         <dex dex="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_13189fa66882fdfcaee7a98a75deffe94c658142/classes.dex" />
     </item>
     <item
