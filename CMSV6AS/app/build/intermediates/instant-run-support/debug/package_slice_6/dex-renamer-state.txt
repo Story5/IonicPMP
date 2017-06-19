@@ -1,4 +1,4 @@
-#Mon Jun 19 11:14:25 CST 2017
-base.0=/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6
+#Mon Jun 19 11:17:42 CST 2017
+base.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6
 renamed.0=classes.dex
-file.0=/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex
+file.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex

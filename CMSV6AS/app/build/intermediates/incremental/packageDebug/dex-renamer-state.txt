@@ -1,7 +1,7 @@
-#Mon Jun 19 11:14:25 CST 2017
-base.0=/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a67ff051e725736d1a1667f44bee122d1f894964
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_79e930a651dbb55f46ede83298c3749a2ffd2d66/classes.dex
-base.1=/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_79e930a651dbb55f46ede83298c3749a2ffd2d66
-file.0=/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a67ff051e725736d1a1667f44bee122d1f894964/classes.dex
+#Mon Jun 19 11:17:42 CST 2017
+base.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_13189fa66882fdfcaee7a98a75deffe94c658142
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_90bcc60f9c0613e016cbbc5ec5707a15615dcacc/classes.dex
+base.1=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_90bcc60f9c0613e016cbbc5ec5707a15615dcacc
+file.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_13189fa66882fdfcaee7a98a75deffe94c658142/classes.dex
