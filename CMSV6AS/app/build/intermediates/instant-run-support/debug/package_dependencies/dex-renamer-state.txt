@@ -1,4 +1,7 @@
-#Mon Jun 19 11:50:44 CST 2017
+#Mon Jun 19 11:55:38 CST 2017
 base.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_f761e28c5034c0a90129b4982d5c5e8289c8bd9a
+renamed.1=classes2.dex
 renamed.0=classes.dex
+file.1=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/2/cordova-6.2.3_1047f563bc8a7e71273b7607bedf9abd728e7e1c/classes.dex
+base.1=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/2/cordova-6.2.3_1047f563bc8a7e71273b7607bedf9abd728e7e1c
 file.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_f761e28c5034c0a90129b4982d5c5e8289c8bd9a/classes.dex

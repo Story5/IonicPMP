@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/libs/cordova-6.2.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="82bdca899fbd98673a90b55de03408fc29882671">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/2/cordova-6.2.3_1047f563bc8a7e71273b7607bedf9abd728e7e1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
