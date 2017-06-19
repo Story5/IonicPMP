@@ -27,7 +27,6 @@
         "@ionic-native/status-bar": "3.10.2",
         "@ionic-native/zbar": "^3.12.1",
         "@ionic/storage": "2.0.1",
-        "cordova-android": "^6.2.3",
         "cordova-plugin-broadcaster": "^2.2.1",
         "cordova-plugin-camera": "^2.4.1",
         "cordova-plugin-compat": "^1.1.0",
@@ -40,6 +39,7 @@
         "ionic-angular": "3.4.2",
         "ionic-plugin-keyboard": "^2.2.1",
         "ionicons": "3.0.0",
+        "jpush-phonegap-plugin": "/Users/Story5/Desktop/jpush-phonegap-plugin-master",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
         "zone.js": "0.8.12"
@@ -66,8 +66,6 @@
                 "APP_KEY": "fdf420b057c045f08ee7d5cb"
             }
         },
-        "platforms": [
-            "android"
-        ]
+        "platforms": []
     }
 }
