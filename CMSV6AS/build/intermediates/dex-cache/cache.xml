@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a67ff051e725736d1a1667f44bee122d1f894964/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/02Company/03BlueEarth/01视频监控/Code/Android/02CMSV6AS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/Story5/Story5/02Company/03BlueEarth/01视频监控/Code/Android/02CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f0d98469e83ce030b2c8fe5cbc0ffbab00f78eed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/02Company/03BlueEarth/01视频监控/Code/Android/02CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7b946473b5a7ae791202ed744dfa748e13dbaae5">
+        <dex dex="/Users/Story5/Story5/02Company/03BlueEarth/01视频监控/Code/Android/02CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_eb2acf3e3b65e4f754c257281f227d3c2b4f31a5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="57b7366e7ab21e0bc3ab6df9e845c23f556ddced">
+        <dex dex="/Users/Story5/Desktop/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_79e930a651dbb55f46ede83298c3749a2ffd2d66/classes.dex" />
+    </item>
+
+</items>
