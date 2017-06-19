@@ -27,6 +27,7 @@
         "@ionic-native/status-bar": "3.10.2",
         "@ionic-native/zbar": "^3.12.1",
         "@ionic/storage": "2.0.1",
+        "cordova-android": "^6.2.3",
         "cordova-plugin-broadcaster": "^2.2.1",
         "cordova-plugin-camera": "^2.4.1",
         "cordova-plugin-compat": "^1.1.0",
@@ -66,6 +67,8 @@
                 "APP_KEY": "fdf420b057c045f08ee7d5cb"
             }
         },
-        "platforms": []
+        "platforms": [
+            "android"
+        ]
     }
 }

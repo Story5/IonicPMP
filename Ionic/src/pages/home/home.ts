@@ -76,19 +76,15 @@ export class HomePage {
 
   pushAndroidActivity() {
     // Send event to Native
-    alert("start fireNativeEvent 1");
     this.broadcaster.fireNativeEvent('openDevice', {"item":"ionic的值"}).then(() => { 
       console.log('success');
-      alert('success fireNativeEvent 1');
     });
   }
 
   pushAndroidActivity2() {
     // Send event to Native
-    alert("start fireNativeEvent 2");
     this.broadcaster.fireNativeEvent('openDevice2', {"item":"ionic的值"}).then(() => { 
       console.log('success');
-      alert('success fireNativeEvent 2');
     });
   }
 
