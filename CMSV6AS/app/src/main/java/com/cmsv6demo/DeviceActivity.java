@@ -8,7 +8,6 @@ import android.widget.Button;
 
 import com.babelstar.gviewer.NetClient;
 import com.babelstar.gviewer.VideoView;
-import com.cmsv6demo.R;
 
 public class DeviceActivity extends Activity {
 	private UpdateViewThread mUpdateViewThread = null;	//视频界面更新线程
