@@ -1,10 +1,10 @@
 package com.cmsv6demo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
 import com.babelstar.gviewer.NetClient;
 import com.babelstar.gviewer.VideoView;
@@ -12,41 +12,28 @@ import com.babelstar.gviewer.VideoView;
 public class DeviceActivity extends Activity {
 	private UpdateViewThread mUpdateViewThread = null;	//视频界面更新线程
 	private VideoView mVideoImage;
-	private Button button1;
-	private Button button2;
+	private TextView device_title;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_device);
-		button1 = (Button) findViewById(R.id.button1);
-		button1.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				mVideoImage.setViewInfo("10210", "10210", 0, "CH1");
-				mVideoImage.StartAV();
-			}
-		});
-
-		button2 = (Button) findViewById(R.id.button2);
-		button2.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				mVideoImage.setViewInfo("10275", "10275", 0, "CH1");
-				mVideoImage.StartAV();
-			}
-		});
 
 		mVideoImage = (VideoView) findViewById(R.id.imageView1);
-		
+
 		NetClient.Initialize();
 //		NetClient.SetDirSvr("121.197.0.50", "121.197.0.50", 6605, 0);
 //		mVideoImage.setViewInfo("90730", "90730", 0, "CH1");
 		NetClient.SetDirSvr("211.162.125.99", "211.162.125.99", 6605, 0);
-		mVideoImage.setViewInfo("10210", "10210", 0, "CH1");
+		Intent intent = getIntent();
+		String device = intent.getStringExtra("device");
+		mVideoImage.setViewInfo(device, device, 0, "CH1");
 		mVideoImage.StartAV();
 		mUpdateViewThread = new UpdateViewThread();
 		mUpdateViewThread.start();
+
+		device_title = (TextView)findViewById(R.id.device_title);
+		device_title.setText("视频设备 : " + device);
 	}
 
 	@Override

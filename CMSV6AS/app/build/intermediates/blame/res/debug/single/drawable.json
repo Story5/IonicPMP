@@ -4,10 +4,6 @@
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/drawable/camera_flash.png",
-        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/drawable/camera_flash.png"
-    },
-    {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/drawable/abc_ic_search_api_material.xml"
     },
@@ -54,6 +50,10 @@
     {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/drawable/jpush_richpush_btn_selector.xml",
+        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/drawable/jpush_richpush_btn_selector.xml"
     },
     {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
@@ -146,6 +146,10 @@
     {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/drawable/jpush_richpush_progressbar.xml",
+        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/drawable/jpush_richpush_progressbar.xml"
     },
     {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",

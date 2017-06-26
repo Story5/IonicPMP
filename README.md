@@ -49,3 +49,10 @@ $ ionic cordova emulate ios
 ```
 $ npm install -g ios-sim
 ```
+## 3.ionic和原生混合
+### 3.1 mix ionic and ios native
+http://www.jianshu.com/p/fc7da9f26f35
+
+### 3.2 mix ionic and android native
+* https://blog.nami.idv.tw/?p=598
+* http://blog.csdn.net/Story51314/article/details/73290212

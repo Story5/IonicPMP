@@ -295,7 +295,7 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
         this.imageUri = new CordovaUri(FileProvider.getUriForFile(cordova.getActivity(),
                 applicationId + ".provider",
                 photo));
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri.getCorrectUri());
+        intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, imageUri.getCorrectUri());
         //We can write to this URI, this will hopefully allow us to write files to get to the next step
         intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
 
@@ -381,7 +381,7 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
                 }
                 File photo = createCaptureFile(JPEG);
                 croppedUri = Uri.fromFile(photo);
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, croppedUri);
+                intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, croppedUri);
             } else {
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
@@ -849,7 +849,7 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
             return 0;
         }
     }
-
+    
     /**
      * Write an inputstream to local disk
      *
@@ -909,14 +909,14 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
      */
     private Uri getUriFromMediaStore() {
         ContentValues values = new ContentValues();
-        values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
+        values.put(android.provider.MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
         Uri uri;
         try {
-            uri = this.cordova.getActivity().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+            uri = this.cordova.getActivity().getContentResolver().insert(android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
         } catch (RuntimeException e) {
             LOG.d(LOG_TAG, "Can't write to external media storage.");
             try {
-                uri = this.cordova.getActivity().getContentResolver().insert(MediaStore.Images.Media.INTERNAL_CONTENT_URI, values);
+                uri = this.cordova.getActivity().getContentResolver().insert(android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI, values);
             } catch (RuntimeException ex) {
                 LOG.d(LOG_TAG, "Can't write to internal media storage.");
                 return null;
@@ -1236,9 +1236,9 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
      */
     private Uri whichContentStore() {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            return MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+            return android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
         } else {
-            return MediaStore.Images.Media.INTERNAL_CONTENT_URI;
+            return android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI;
         }
     }
 
@@ -1290,7 +1290,7 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
     public void onMediaScannerConnected() {
         try {
             this.conn.scanFile(this.scanMe.toString(), "image/*");
-        } catch (IllegalStateException e) {
+        } catch (java.lang.IllegalStateException e) {
             LOG.e(LOG_TAG, "Can't scan file in MediaScanner after taking picture");
         }
 

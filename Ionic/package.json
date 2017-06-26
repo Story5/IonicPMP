@@ -28,6 +28,7 @@
         "@ionic-native/zbar": "^3.12.1",
         "@ionic/storage": "2.0.1",
         "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
         "cordova-plugin-broadcaster": "^2.2.1",
         "cordova-plugin-camera": "^2.4.1",
         "cordova-plugin-compat": "^1.1.0",
@@ -68,7 +69,8 @@
             }
         },
         "platforms": [
-            "android"
+            "android",
+            "ios"
         ]
     }
 }

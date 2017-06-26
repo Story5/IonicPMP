@@ -60,15 +60,15 @@ public class CDVBroadcaster extends CordovaPlugin {
         });
     }
 
-    protected void registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
+    protected void registerReceiver(android.content.BroadcastReceiver receiver, android.content.IntentFilter filter) {
         LocalBroadcastManager.getInstance(super.webView.getContext()).registerReceiver(receiver,filter);
     }
 
-    protected void unregisterReceiver(BroadcastReceiver receiver) {
+    protected void unregisterReceiver(android.content.BroadcastReceiver receiver) {
         LocalBroadcastManager.getInstance(super.webView.getContext()).unregisterReceiver(receiver);
     }
 
-    protected boolean sendBroadcast(Intent intent) {
+    protected boolean sendBroadcast(android.content.Intent intent) {
         return LocalBroadcastManager.getInstance(super.webView.getContext()).sendBroadcast(intent);
     }
 

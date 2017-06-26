@@ -16,6 +16,10 @@
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/abc_activity_chooser_view.xml"
     },
     {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/jpush_webview_layout.xml",
+        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/layout/jpush_webview_layout.xml"
+    },
+    {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/abc_select_dialog_material.xml"
     },
@@ -52,6 +56,10 @@
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/abc_action_bar_up_container.xml"
     },
     {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/activity_test_cordova_with_layout.xml",
+        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/layout/activity_test_cordova_with_layout.xml"
+    },
+    {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/notification_template_custom_big.xml",
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/notification_template_custom_big.xml"
     },
@@ -68,6 +76,10 @@
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/notification_template_part_time.xml"
     },
     {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/layout/activity_main.xml"
+    },
+    {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/abc_action_menu_layout.xml"
     },
@@ -76,12 +88,20 @@
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/activity_test_cordova.xml",
+        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/layout/activity_test_cordova.xml"
+    },
+    {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/jpush_popwin_layout.xml",
+        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/layout/jpush_popwin_layout.xml"
     },
     {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
@@ -96,8 +116,8 @@
         "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/cszbarscanner.xml",
-        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/layout/cszbarscanner.xml"
+        "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/test_notification_layout.xml",
+        "source": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/src/main/res/layout/test_notification_layout.xml"
     },
     {
         "merged": "/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",

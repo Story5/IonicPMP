@@ -14,22 +14,12 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/device_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="设备1"/>
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="设备2"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30dp"
+        />
 
 </RelativeLayout>

@@ -8,21 +8,23 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="25" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.cmsv6demo.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.flash"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.front"
-        android:required="false" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
+    <permission
+        android:name="com.cmsv6demo.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -33,14 +35,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.cmsv6demo.DeviceActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="com.cmsv6demo.MainActivity" >
         </activity>
 
         <provider
@@ -53,8 +48,67 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name="org.cloudsky.cordovaPlugins.ZBarScannerActivity" />
+        <activity
+            android:name="com.cmsv6demo.DeviceActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name="com.cmsv6demo.TestCordovaActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cmsv6demo.TestCordovaWithLayoutActivity" />
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cmsv6demo" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+
+                <category android:name="com.cmsv6demo" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="fdf420b057c045f08ee7d5cb" /> <!-- </>值来自开发者平台取得的AppKey -->
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
             android:authorities="com.cmsv6demo.com.android.tools.fd.runtime.InstantRunContentProvider"

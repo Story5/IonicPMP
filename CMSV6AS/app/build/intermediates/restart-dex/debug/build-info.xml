@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.2"
-    timestamp="1497857365037"
+    timestamp="1498446517648"
     token="4556335941999371661"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -62,7 +62,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1497857365037"
+        timestamp="1498446517648"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
