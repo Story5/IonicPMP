@@ -6,23 +6,29 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.2"
-    timestamp="1498446517648"
+    timestamp="1498449969340"
     token="4556335941999371661"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="642" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="102" />
     <task
         name="verifier"
-        duration="0" />
+        duration="3" />
 
+    <artifact
+        location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/outputs/apk/app-debug.apk"
+        type="SPLIT_MAIN" />
     <artifact
         location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
@@ -34,9 +40,6 @@
         type="SPLIT" />
     <artifact
         location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
         location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -56,14 +59,17 @@
     <artifact
         location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
-    <artifact
-        location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/outputs/apk/app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1498446517648"
+        timestamp="1498449969340"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
@@ -75,9 +81,6 @@
             type="SPLIT" />
         <artifact
             location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -97,9 +100,6 @@
         <artifact
             location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

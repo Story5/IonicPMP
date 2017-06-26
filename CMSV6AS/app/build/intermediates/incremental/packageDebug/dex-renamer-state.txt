@@ -1,4 +1,4 @@
-#Mon Jun 26 11:06:42 CST 2017
+#Mon Jun 26 12:06:14 CST 2017
 base.0=/Users/Story5/Story5/01Project/GitHub/IonicPMP/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_13189fa66882fdfcaee7a98a75deffe94c658142
 renamed.1=classes.dex
 renamed.0=classes2.dex
