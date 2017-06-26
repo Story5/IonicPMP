@@ -92,4 +92,5 @@
     <plugin name="jpush-phonegap-plugin" spec="/Users/Story5/Desktop/jpush-phonegap-plugin-master">
         <variable name="APP_KEY" value="fdf420b057c045f08ee7d5cb" />
     </plugin>
+    <plugin name="cordova-plugin-http" spec="^1.2.0" />
 </widget>
