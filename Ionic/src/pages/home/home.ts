@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 import { Broadcaster } from '@ionic-native/broadcaster';
+import { HTTP } from '@ionic-native/http';
+import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
 @Component({
   selector: 'page-home',
@@ -13,9 +14,10 @@ export class HomePage {
   
 
   constructor(public navCtrl: NavController,
+              public broadcaster : Broadcaster,
               public camera: Camera,
-              public zbar: ZBar,
-              public broadcaster : Broadcaster) {
+              public http: HTTP,
+              public zbar: ZBar) {
 
   }
 

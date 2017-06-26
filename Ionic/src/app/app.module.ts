@@ -8,9 +8,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { Autostart } from '@ionic-native/autostart';
-import { Camera } from '@ionic-native/camera';
-import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 import { Broadcaster } from '@ionic-native/broadcaster';
+import { Camera } from '@ionic-native/camera';
+import { HTTP } from '@ionic-native/http';
+import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,10 @@ import { Broadcaster } from '@ionic-native/broadcaster';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Autostart,
+    Broadcaster,
     Camera,
-    ZBar,
-    Broadcaster
+    HTTP,
+    ZBar
   ]
 })
 export class AppModule {}
