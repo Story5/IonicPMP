@@ -24,6 +24,7 @@
         "@ionic-native/broadcaster": "^3.12.1",
         "@ionic-native/camera": "^3.12.1",
         "@ionic-native/core": "3.10.2",
+        "@ionic-native/http": "^3.12.1",
         "@ionic-native/splash-screen": "3.10.2",
         "@ionic-native/status-bar": "3.10.2",
         "@ionic-native/zbar": "^3.12.1",
