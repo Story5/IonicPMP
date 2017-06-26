@@ -79,6 +79,7 @@
     </platform>
     <engine name="android" spec="^6.2.3" />
     <engine name="ios" spec="^4.4.0" />
+    <plugin name="cordova-plugin-autostart" spec="^2.0.1" />
     <plugin name="cordova-plugin-broadcaster" spec="^2.2.1" />
     <plugin name="cordova-plugin-camera" spec="^2.4.1" />
     <plugin name="cordova-plugin-console" spec="^1.0.5" />
@@ -91,5 +92,4 @@
     <plugin name="jpush-phonegap-plugin" spec="/Users/Story5/Desktop/jpush-phonegap-plugin-master">
         <variable name="APP_KEY" value="fdf420b057c045f08ee7d5cb" />
     </plugin>
-    <plugin name="cordova-plugin-autostart" spec="^2.0.1" />
 </widget>

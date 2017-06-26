@@ -12,7 +12,10 @@ import { Broadcaster } from '@ionic-native/broadcaster';
 export class HomePage {
   
 
-  constructor(public navCtrl: NavController,public camera: Camera,public zbar: ZBar,public broadcaster : Broadcaster) {
+  constructor(public navCtrl: NavController,
+              public camera: Camera,
+              public zbar: ZBar,
+              public broadcaster : Broadcaster) {
 
   }
 
