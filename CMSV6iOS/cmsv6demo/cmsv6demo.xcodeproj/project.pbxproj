@@ -61,8 +61,6 @@
 		753955A01F02BA6F0013758A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 753955781F02BA6F0013758A /* AFURLSessionManager.m */; };
 		753955A11F02BA6F0013758A /* CordovaHttpPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539557A1F02BA6F0013758A /* CordovaHttpPlugin.m */; };
 		753955A21F02BA6F0013758A /* TextResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539557C1F02BA6F0013758A /* TextResponseSerializer.m */; };
-		753955A31F02BA6F0013758A /* CDVSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539557F1F02BA6F0013758A /* CDVSound.m */; };
-		753955A41F02BA6F0013758A /* CDVCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 753955821F02BA6F0013758A /* CDVCapture.m */; };
 		753955A51F02BA6F0013758A /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 753955851F02BA6F0013758A /* CDVSplashScreen.m */; };
 		753955A61F02BA6F0013758A /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 753955871F02BA6F0013758A /* CDVViewController+SplashScreen.m */; };
 		753955A71F02BA6F0013758A /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539558A1F02BA6F0013758A /* CDVStatusBar.m */; };
@@ -177,10 +175,6 @@
 		7539557A1F02BA6F0013758A /* CordovaHttpPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CordovaHttpPlugin.m; sourceTree = "<group>"; };
 		7539557B1F02BA6F0013758A /* TextResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextResponseSerializer.h; sourceTree = "<group>"; };
 		7539557C1F02BA6F0013758A /* TextResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextResponseSerializer.m; sourceTree = "<group>"; };
-		7539557E1F02BA6F0013758A /* CDVSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVSound.h; sourceTree = "<group>"; };
-		7539557F1F02BA6F0013758A /* CDVSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVSound.m; sourceTree = "<group>"; };
-		753955811F02BA6F0013758A /* CDVCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVCapture.h; sourceTree = "<group>"; };
-		753955821F02BA6F0013758A /* CDVCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVCapture.m; sourceTree = "<group>"; };
 		753955841F02BA6F0013758A /* CDVSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVSplashScreen.h; sourceTree = "<group>"; };
 		753955851F02BA6F0013758A /* CDVSplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVSplashScreen.m; sourceTree = "<group>"; };
 		753955861F02BA6F0013758A /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDVViewController+SplashScreen.h"; sourceTree = "<group>"; };
@@ -331,8 +325,6 @@
 				753955611F02BA6F0013758A /* cordova-plugin-device */,
 				753955641F02BA6F0013758A /* cordova-plugin-file */,
 				7539556B1F02BA6F0013758A /* cordova-plugin-http */,
-				7539557D1F02BA6F0013758A /* cordova-plugin-media */,
-				753955801F02BA6F0013758A /* cordova-plugin-media-capture */,
 				753955831F02BA6F0013758A /* cordova-plugin-splashscreen */,
 				753955881F02BA6F0013758A /* cordova-plugin-statusbar */,
 				7539558B1F02BA6F0013758A /* ionic-plugin-keyboard */,
@@ -449,24 +441,6 @@
 				7539557C1F02BA6F0013758A /* TextResponseSerializer.m */,
 			);
 			path = "cordova-plugin-http";
-			sourceTree = "<group>";
-		};
-		7539557D1F02BA6F0013758A /* cordova-plugin-media */ = {
-			isa = PBXGroup;
-			children = (
-				7539557E1F02BA6F0013758A /* CDVSound.h */,
-				7539557F1F02BA6F0013758A /* CDVSound.m */,
-			);
-			path = "cordova-plugin-media";
-			sourceTree = "<group>";
-		};
-		753955801F02BA6F0013758A /* cordova-plugin-media-capture */ = {
-			isa = PBXGroup;
-			children = (
-				753955811F02BA6F0013758A /* CDVCapture.h */,
-				753955821F02BA6F0013758A /* CDVCapture.m */,
-			);
-			path = "cordova-plugin-media-capture";
 			sourceTree = "<group>";
 		};
 		753955831F02BA6F0013758A /* cordova-plugin-splashscreen */ = {
@@ -633,7 +607,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753955A41F02BA6F0013758A /* CDVCapture.m in Sources */,
 				759063991ED67F89003C1C48 /* ConfigView.m in Sources */,
 				7539559A1F02BA6F0013758A /* CDVLocalFilesystem.m in Sources */,
 				753955991F02BA6F0013758A /* CDVFile.m in Sources */,
@@ -654,7 +627,6 @@
 				753955951F02BA6F0013758A /* CsZBar.m in Sources */,
 				7539559E1F02BA6F0013758A /* AFURLRequestSerialization.m in Sources */,
 				18912D1617FAB67600BEA969 /* main.m in Sources */,
-				753955A31F02BA6F0013758A /* CDVSound.m in Sources */,
 				753955911F02BA6F0013758A /* CDVJpegHeaderWriter.m in Sources */,
 				753955901F02BA6F0013758A /* CDVCamera.m in Sources */,
 				7539558F1F02BA6F0013758A /* CDVBroadcaster.m in Sources */,
