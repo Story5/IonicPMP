@@ -29,24 +29,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    if (self.devicesNumbers) {
-        [self.devicesNumbers removeAllObjects];
-        [self.devicesNumbers release];
-        self.devicesNumbers = nil;
-    }
-    
-    if (self.devicesNames) {
-        [self.devicesNames removeAllObjects];
-        [self.devicesNames release];
-        self.devicesNames = nil;
-    }
-    
-    self.dataSource = nil;
-    self.delegate = nil;
-}
-
 #pragma mark - button click
 - (void)deviceButtonClicked:(UIButton *)aSender
 {

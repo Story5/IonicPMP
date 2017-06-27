@@ -15,6 +15,9 @@
 
 @interface ViewController ()
 
+@property (nonatomic,strong) UIButton *device1;
+@property (nonatomic,strong) UIButton *device2;
+
 //@property (nonatomic,strong) UIView *configView;
 @property (nonatomic,strong) DeviceSwitchView *deviceSwitchView;
 
@@ -64,6 +67,40 @@
                                                userInfo:nil
                                                 repeats:YES ];
     isLoading = YES;
+    
+    self.device1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 500, 80, 40)];
+    [self.device1 setTitle:@"设备1" forState:UIControlStateNormal];
+    self.device1.tag = 100;
+    [self.device1 addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.device1];
+    
+    self.device2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 500, 80, 40)];
+    [self.device2 setTitle:@"设备2" forState:UIControlStateNormal];
+    self.device2.tag = 200;
+    [self.device2 addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.device2];
+}
+
+- (void)buttonClick:(UIButton *)aSender
+{
+    NSString *devIdno = nil;
+    if (aSender.tag == 100) {
+        devIdno = @"10250";
+    } else {
+        devIdno = @"10275";
+    }
+    NETMEDIA_StopRealPlay(realHandle);
+    // 关闭预览对象
+    NETMEDIA_CloseRealPlay(realHandle);
+    int channel = 0;
+    NETMEDIA_OpenRealPlay([devIdno UTF8String], // 设备编号
+                          channel,              // 通道号，0表示通道1
+                          1,                    // 0主码流，1子码流
+                          0,                    // 连接模式，暂时无效
+                          true,
+                          &realHandle);
+    NETMEDIA_SetUserInfo(realHandle, "byzgcxc", "000000");
+    NETMEDIA_StartRealPlay(realHandle, true);
 }
 
 - (void) viewDidUnload {
@@ -71,9 +108,6 @@
     [timerPlay invalidate];
     NETMEDIA_StopRealPlay(realHandle);
     NETMEDIA_CloseRealPlay(realHandle); realHandle = 0;
-    [videoImg release]; videoImg = nil;
-    [videoRate release]; videoRate = nil;
-    
 }
 
 #pragma mark - private methods

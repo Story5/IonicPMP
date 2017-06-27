@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Ionic";
+    
+    self.wwwFolderName = @"www";
+    self.startPage = @"index.html";
 }
 
 - (void)didReceiveMemoryWarning {
