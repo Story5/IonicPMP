@@ -7,12 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "IonicViewController.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    
+    UIViewController *vc1 = [[IonicViewController alloc] init];
+    UIViewController *vc2 = [[ViewController alloc] init];
+    tabBar.viewControllers = @[vc1,vc2];
+    
+    self.window.rootViewController = tabBar;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
