@@ -15,49 +15,43 @@
 
 @interface ViewController ()
 
-@property (nonatomic,strong) UIButton *device1;
-@property (nonatomic,strong) UIButton *device2;
-
-//@property (nonatomic,strong) UIView *configView;
-@property (nonatomic,strong) DeviceSwitchView *deviceSwitchView;
+@property (nonatomic,strong) UILabel *deviceLabel;
 
 @end
 
 @implementation ViewController
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.title = @"博宇站视频监控";
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.hidden = NO;
     
     CGRect rcMain = [[UIScreen mainScreen] bounds];
     
+    self.deviceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, self.view.bounds.size.width, 40)];
+    self.deviceLabel.textAlignment = NSTextAlignmentCenter;
+    self.deviceLabel.font = [UIFont boldSystemFontOfSize:25];
+    self.deviceLabel.text = [NSString stringWithFormat:@"设备编号:%@",self.deviceId];
+    [self.view addSubview:self.deviceLabel];
+    
     CGFloat gap = 5;
-    CGFloat yOffSet = 20;
+//    CGFloat yOffSet = 20;
+    CGFloat yOffSet = (self.view.bounds.size.height - 240) / 2;
     int xPos = rcMain.origin.x + gap;
     videoImg = [[UIImageView alloc] initWithFrame:CGRectMake(xPos, rcMain.origin.y + yOffSet, rcMain.size.width - 2 * gap, 240)];
     [self.view addSubview:videoImg];
     
     int yPos = CGRectGetMaxY(videoImg.frame) + 5;
     videoRate = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, 200, 40)];
+    videoRate.font = [UIFont boldSystemFontOfSize:15];
     [videoRate setText:@"Loading"];
     [videoRate setTextColor:[UIColor blueColor]];
     [self.view addSubview:videoRate];
     
-    CGFloat yOrigin = CGRectGetMaxY(videoRate.frame);
-    CGRect frame = CGRectMake(0, yOrigin, self.view.bounds.size.width, self.view.bounds.size.height - yOrigin - 5);
-    self.deviceSwitchView = [[DeviceSwitchView alloc] initWithFrame:frame];
-    [self.view addSubview:self.deviceSwitchView];
     
-//    self.configView = [[ConfigView alloc] initWithFrame:frame];
-//    [self.view addSubview:self.configView];
+    
     
     [self configNetMedia];
     
@@ -67,40 +61,6 @@
                                                userInfo:nil
                                                 repeats:YES ];
     isLoading = YES;
-    
-    self.device1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 500, 80, 40)];
-    [self.device1 setTitle:@"设备1" forState:UIControlStateNormal];
-    self.device1.tag = 100;
-    [self.device1 addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.device1];
-    
-    self.device2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 500, 80, 40)];
-    [self.device2 setTitle:@"设备2" forState:UIControlStateNormal];
-    self.device2.tag = 200;
-    [self.device2 addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.device2];
-}
-
-- (void)buttonClick:(UIButton *)aSender
-{
-    NSString *devIdno = nil;
-    if (aSender.tag == 100) {
-        devIdno = @"10250";
-    } else {
-        devIdno = @"10275";
-    }
-    NETMEDIA_StopRealPlay(realHandle);
-    // 关闭预览对象
-    NETMEDIA_CloseRealPlay(realHandle);
-    int channel = 0;
-    NETMEDIA_OpenRealPlay([devIdno UTF8String], // 设备编号
-                          channel,              // 通道号，0表示通道1
-                          1,                    // 0主码流，1子码流
-                          0,                    // 连接模式，暂时无效
-                          true,
-                          &realHandle);
-    NETMEDIA_SetUserInfo(realHandle, "byzgcxc", "000000");
-    NETMEDIA_StartRealPlay(realHandle, true);
 }
 
 - (void) viewDidUnload {
@@ -133,9 +93,10 @@
     NETMEDIA_CloseRealPlay(realHandle);
     
     int channel = 0;
-    //    NSString *devIdno = @"91510970";
-        NSString *devIdno = @"10275";
+//    NSString *devIdno = @"91510970";
+//    NSString *devIdno = @"10275";
 //    NSString *devIdno = @"10250";
+    NSString *devIdno = self.deviceId;
     // 打开预览对象
     NETMEDIA_OpenRealPlay([devIdno UTF8String], // 设备编号
                           channel,              // 通道号，0表示通道1

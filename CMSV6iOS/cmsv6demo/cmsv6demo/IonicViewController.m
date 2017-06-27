@@ -7,6 +7,7 @@
 //
 
 #import "IonicViewController.h"
+#import "ViewController.h"
 
 @interface IonicViewController ()
 
@@ -17,16 +18,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Ionic";
-    
     self.wwwFolderName = @"www";
     self.startPage = @"index.html";
+
+    [self addNotification];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)addNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"openDevice"
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      NSLog(@"Handled 'test.event' [%@]", notification.userInfo[@"item"]);
+                                                      [self pushDevice:@"10250"];
+                                                  }];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"openDevice2"
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      NSLog(@"Handled 'test.event' [%@]", notification.userInfo[@"item"]);
+                                                      [self pushDevice:@"10275"];
+                                                  }];
+
+}
+
+- (void)pushDevice:(NSString *)device
+{
+    ViewController *vc = [[ViewController alloc] init];
+    vc.deviceId = device;
+    [self.navigationController pushViewController:vc animated:true];
+}
+
 
 /*
 #pragma mark - Navigation

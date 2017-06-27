@@ -20,4 +20,6 @@
     int videoHeight;
     int videoRgb565Length;
 }
+
+@property (nonatomic,strong) NSString *deviceId;
 @end

@@ -16,14 +16,16 @@
 {
     // Override point for customization after application launch.
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIViewController *vc1 = [[IonicViewController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc1];
     
     UITabBarController *tabBar = [[UITabBarController alloc] init];
     
-    UIViewController *vc1 = [[IonicViewController alloc] init];
-    UIViewController *vc2 = [[ViewController alloc] init];
-    tabBar.viewControllers = @[vc1,vc2];
+    
+//    UIViewController *vc2 = [[ViewController alloc] init];
+//    tabBar.viewControllers = @[nc,vc2];
 
-    self.viewController = tabBar;
+    self.viewController = nc;
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 
 //    self.window.rootViewController = tabBar;
