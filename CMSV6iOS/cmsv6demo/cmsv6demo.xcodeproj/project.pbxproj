@@ -37,10 +37,39 @@
 		18912D5C17FAB7CF00BEA969 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18912D5B17FAB7CF00BEA969 /* libstdc++.dylib */; };
 		18912D5E17FAB7DA00BEA969 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18912D5D17FAB7DA00BEA969 /* libc++.dylib */; };
 		18912D6017FAB80200BEA969 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18912D5F17FAB80200BEA969 /* libz.dylib */; };
+		753A0ECA1F023872007F87A7 /* IonicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753A0EC91F023872007F87A7 /* IonicViewController.m */; };
+		753A0ECD1F023894007F87A7 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 753A0ECC1F023894007F87A7 /* config.xml */; };
+		753A0ED81F0238A4007F87A7 /* cordova in Resources */ = {isa = PBXBuildFile; fileRef = 753A0ED71F0238A4007F87A7 /* cordova */; };
+		753A0EDA1F0238AA007F87A7 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 753A0ED91F0238AA007F87A7 /* www */; };
+		753A0EDD1F0238CE007F87A7 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 753A0ED41F02389B007F87A7 /* libCordova.a */; };
 		75562F4C1ED5291A0073388A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75562F4B1ED5291A0073388A /* AVFoundation.framework */; };
 		755C658F1ED6A7FB00F637C6 /* DeviceSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 755C658E1ED6A7FB00F637C6 /* DeviceSwitchView.m */; };
 		759063991ED67F89003C1C48 /* ConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759063981ED67F89003C1C48 /* ConfigView.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		753A0ED31F02389B007F87A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 753A0ECE1F02389B007F87A7 /* CordovaLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68A32D7114102E1C006B237C;
+			remoteInfo = CordovaLib;
+		};
+		753A0ED51F02389B007F87A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 753A0ECE1F02389B007F87A7 /* CordovaLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0C01EB21E3911D50056E6CB;
+			remoteInfo = Cordova;
+		};
+		753A0EDB1F0238C8007F87A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 753A0ECE1F02389B007F87A7 /* CordovaLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		147740441B7407670009E4BF /* libfaad.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfaad.a; path = ../lib/libfaad.a; sourceTree = "<group>"; };
@@ -79,6 +108,12 @@
 		18912D5B17FAB7CF00BEA969 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		18912D5D17FAB7DA00BEA969 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		18912D5F17FAB80200BEA969 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		753A0EC81F023872007F87A7 /* IonicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonicViewController.h; sourceTree = "<group>"; };
+		753A0EC91F023872007F87A7 /* IonicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonicViewController.m; sourceTree = "<group>"; };
+		753A0ECC1F023894007F87A7 /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = SOURCE_ROOT; };
+		753A0ECE1F02389B007F87A7 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		753A0ED71F0238A4007F87A7 /* cordova */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cordova; sourceTree = SOURCE_ROOT; };
+		753A0ED91F0238AA007F87A7 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		75562F4B1ED5291A0073388A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		755C658D1ED6A7FB00F637C6 /* DeviceSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSwitchView.h; sourceTree = "<group>"; };
 		755C658E1ED6A7FB00F637C6 /* DeviceSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSwitchView.m; sourceTree = "<group>"; };
@@ -91,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753A0EDD1F0238CE007F87A7 /* libCordova.a in Frameworks */,
 				147740581B7407BC0009E4BF /* libpostproc.a in Frameworks */,
 				147740591B7407BC0009E4BF /* libswresample.a in Frameworks */,
 				147740481B7407BC0009E4BF /* libavcodec.a in Frameworks */,
@@ -124,18 +160,6 @@
 		18912CFD17FAB67600BEA969 = {
 			isa = PBXGroup;
 			children = (
-				18912D4117FAB78500BEA969 /* libavcodec.a */,
-				18912D4217FAB78500BEA969 /* libavdevice.a */,
-				18912D4317FAB78500BEA969 /* libavfilter.a */,
-				18912D4417FAB78500BEA969 /* libavformat.a */,
-				18912D4517FAB78500BEA969 /* libavutil.a */,
-				18912D4617FAB78500BEA969 /* libswscale.a */,
-				18912D4717FAB78500BEA969 /* libttxcommon.a */,
-				18912D4817FAB78500BEA969 /* libttxfile.a */,
-				18912D4917FAB78500BEA969 /* libttxmedia.a */,
-				18912D4A17FAB78500BEA969 /* libttxplay.a */,
-				18912D4B17FAB78500BEA969 /* libx264.a */,
-				18912D4C17FAB78500BEA969 /* libyuv2rgb.a */,
 				18912D0F17FAB67600BEA969 /* cmsv6demo */,
 				18912D0817FAB67600BEA969 /* Frameworks */,
 				18912D0717FAB67600BEA969 /* Products */,
@@ -153,6 +177,18 @@
 		18912D0817FAB67600BEA969 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18912D4117FAB78500BEA969 /* libavcodec.a */,
+				18912D4217FAB78500BEA969 /* libavdevice.a */,
+				18912D4317FAB78500BEA969 /* libavfilter.a */,
+				18912D4417FAB78500BEA969 /* libavformat.a */,
+				18912D4517FAB78500BEA969 /* libavutil.a */,
+				18912D4617FAB78500BEA969 /* libswscale.a */,
+				18912D4717FAB78500BEA969 /* libttxcommon.a */,
+				18912D4817FAB78500BEA969 /* libttxfile.a */,
+				18912D4917FAB78500BEA969 /* libttxmedia.a */,
+				18912D4A17FAB78500BEA969 /* libttxplay.a */,
+				18912D4B17FAB78500BEA969 /* libx264.a */,
+				18912D4C17FAB78500BEA969 /* libyuv2rgb.a */,
 				75562F4B1ED5291A0073388A /* AVFoundation.framework */,
 				147740561B7407BC0009E4BF /* libpostproc.a */,
 				147740571B7407BC0009E4BF /* libswresample.a */,
@@ -173,10 +209,13 @@
 		18912D0F17FAB67600BEA969 /* cmsv6demo */ = {
 			isa = PBXGroup;
 			children = (
+				753A0ECB1F023878007F87A7 /* Ionic */,
 				18912D1817FAB67600BEA969 /* AppDelegate.h */,
 				18912D1917FAB67600BEA969 /* AppDelegate.m */,
 				18912D1B17FAB67600BEA969 /* Main_iPhone.storyboard */,
 				18912D1E17FAB67600BEA969 /* Main_iPad.storyboard */,
+				753A0EC81F023872007F87A7 /* IonicViewController.h */,
+				753A0EC91F023872007F87A7 /* IonicViewController.m */,
 				18912D2117FAB67600BEA969 /* ViewController.h */,
 				18912D2217FAB67600BEA969 /* ViewController.m */,
 				759063971ED67F89003C1C48 /* ConfigView.h */,
@@ -200,6 +239,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		753A0ECB1F023878007F87A7 /* Ionic */ = {
+			isa = PBXGroup;
+			children = (
+				753A0ED91F0238AA007F87A7 /* www */,
+				753A0ED71F0238A4007F87A7 /* cordova */,
+				753A0ECE1F02389B007F87A7 /* CordovaLib.xcodeproj */,
+				753A0ECC1F023894007F87A7 /* config.xml */,
+			);
+			name = Ionic;
+			sourceTree = "<group>";
+		};
+		753A0ECF1F02389B007F87A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				753A0ED41F02389B007F87A7 /* libCordova.a */,
+				753A0ED61F02389B007F87A7 /* Cordova.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,6 +273,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				753A0EDC1F0238C8007F87A7 /* PBXTargetDependency */,
 			);
 			name = cmsv6demo;
 			productName = cmsv6demo;
@@ -246,6 +306,12 @@
 			mainGroup = 18912CFD17FAB67600BEA969;
 			productRefGroup = 18912D0717FAB67600BEA969 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 753A0ECF1F02389B007F87A7 /* Products */;
+					ProjectRef = 753A0ECE1F02389B007F87A7 /* CordovaLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				18912D0517FAB67600BEA969 /* cmsv6demo */,
@@ -253,15 +319,35 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		753A0ED41F02389B007F87A7 /* libCordova.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCordova.a;
+			remoteRef = 753A0ED31F02389B007F87A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		753A0ED61F02389B007F87A7 /* Cordova.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Cordova.framework;
+			remoteRef = 753A0ED51F02389B007F87A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		18912D0417FAB67600BEA969 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				18912D2017FAB67600BEA969 /* Main_iPad.storyboard in Resources */,
+				753A0EDA1F0238AA007F87A7 /* www in Resources */,
 				18912D2517FAB67600BEA969 /* Images.xcassets in Resources */,
 				18912D1D17FAB67600BEA969 /* Main_iPhone.storyboard in Resources */,
+				753A0ED81F0238A4007F87A7 /* cordova in Resources */,
 				18912D1417FAB67600BEA969 /* InfoPlist.strings in Resources */,
+				753A0ECD1F023894007F87A7 /* config.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,10 +363,19 @@
 				18912D1A17FAB67600BEA969 /* AppDelegate.m in Sources */,
 				18912D1617FAB67600BEA969 /* main.m in Sources */,
 				755C658F1ED6A7FB00F637C6 /* DeviceSwitchView.m in Sources */,
+				753A0ECA1F023872007F87A7 /* IonicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		753A0EDC1F0238C8007F87A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CordovaLib;
+			targetProxy = 753A0EDB1F0238C8007F87A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		18912D1217FAB67600BEA969 /* InfoPlist.strings */ = {
@@ -399,13 +494,17 @@
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cmsv6demo/cmsv6demo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CordovaLib/Classes/Public\"";
 				INFOPLIST_FILE = "cmsv6demo/cmsv6demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Story5/Desktop/cmsv6iOS20151104/lib\n",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Story5.cmsv6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -427,13 +526,17 @@
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cmsv6demo/cmsv6demo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CordovaLib/Classes/Public\"";
 				INFOPLIST_FILE = "cmsv6demo/cmsv6demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Story5/Desktop/cmsv6iOS20151104/lib\n",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Story5.cmsv6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

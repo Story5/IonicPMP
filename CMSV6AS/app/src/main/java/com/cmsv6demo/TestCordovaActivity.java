@@ -31,7 +31,7 @@ public class TestCordovaActivity extends CordovaActivity {
                 Log.v("onReceive","我收到消息啦");
                 Intent intent1 = new Intent();
                 intent1.setClass(TestCordovaActivity.this,DeviceActivity.class);
-                intent1.putExtra("device","10210");
+                intent1.putExtra("device","10250");
                 startActivity(intent1);
             }
         };

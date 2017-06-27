@@ -33,6 +33,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.title = @"博宇站视频监控";
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
     CGRect rcMain = [[UIScreen mainScreen] bounds];
     
