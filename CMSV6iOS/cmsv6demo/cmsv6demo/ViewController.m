@@ -100,8 +100,8 @@
     
     int channel = 0;
     //    NSString *devIdno = @"91510970";
-    //    NSString *devIdno = @"10275";
-    NSString *devIdno = @"10210";
+        NSString *devIdno = @"10275";
+//    NSString *devIdno = @"10210";
     // 打开预览对象
     NETMEDIA_OpenRealPlay([devIdno UTF8String], // 设备编号
                           channel,              // 通道号，0表示通道1

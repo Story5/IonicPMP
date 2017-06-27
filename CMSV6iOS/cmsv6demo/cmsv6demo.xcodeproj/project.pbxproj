@@ -91,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75562F4C1ED5291A0073388A /* AVFoundation.framework in Frameworks */,
 				147740581B7407BC0009E4BF /* libpostproc.a in Frameworks */,
 				147740591B7407BC0009E4BF /* libswresample.a in Frameworks */,
 				147740481B7407BC0009E4BF /* libavcodec.a in Frameworks */,
@@ -112,6 +111,7 @@
 				18912D5E17FAB7DA00BEA969 /* libc++.dylib in Frameworks */,
 				18912D5C17FAB7CF00BEA969 /* libstdc++.dylib in Frameworks */,
 				18912D5A17FAB7AA00BEA969 /* libiconv.dylib in Frameworks */,
+				75562F4C1ED5291A0073388A /* AVFoundation.framework in Frameworks */,
 				18912D0C17FAB67600BEA969 /* CoreGraphics.framework in Frameworks */,
 				18912D0E17FAB67600BEA969 /* UIKit.framework in Frameworks */,
 				18912D0A17FAB67600BEA969 /* Foundation.framework in Frameworks */,
@@ -396,6 +396,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5R9VJKQ3T;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cmsv6demo/cmsv6demo-Prefix.pch";
 				INFOPLIST_FILE = "cmsv6demo/cmsv6demo-Info.plist";
@@ -423,6 +424,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5R9VJKQ3T;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cmsv6demo/cmsv6demo-Prefix.pch";
 				INFOPLIST_FILE = "cmsv6demo/cmsv6demo-Info.plist";
