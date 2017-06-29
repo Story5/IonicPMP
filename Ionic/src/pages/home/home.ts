@@ -23,21 +23,29 @@ export class HomePage {
 
   ngOnInit() {
     window.addEventListener("message", (e) => {
-      if (e.data == "getewmvalue") {
+      if (e.data == "getSystem") {
+        this.returnMobileSystem();
+      } else if (e.data == "getewmvalue") {
         this.scan2dBarcodes ();
       } else if (e.data == "getPicValue") {
         this.takePhoto();
-        // this.scan2dBarcodes ();
       } else if (e.data == "getVideo1") {
         this.pushAndroidActivity();
       } else if (e.data == "getVideo2") {
         this.pushAndroidActivity2();
       } else if (e.data.indexOf("set_jPushTags") > -1) {
-        this.set_jPushTags(e.data.split('|')[1]);
+        // this.set_jPushTags(e.data.split('|')[1]);
       } else if (e.data.indexOf("set_jPushAlias") > -1) {
-        this.set_jPushAlias(e.data.split('|')[1]);
+        // this.set_jPushAlias(e.data.split('|')[1]);
       }
     }, false);
+  }
+
+  returnMobileSystem() {
+    let iframe = document.getElementById("mainframe");
+    var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
+    // iWindow.postMessage("getSystem:" + "android", "*");
+    iWindow.postMessage("getSystem:" + "ios", "*");
   }
 
   takePhoto () {
