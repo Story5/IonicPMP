@@ -11,7 +11,7 @@ import { Autostart } from '@ionic-native/autostart';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
 import { HTTP } from '@ionic-native/http';
-import { ZBar, ZBarOptions } from '@ionic-native/zbar';
+import { ZBar } from '@ionic-native/zbar';
 
 @NgModule({
   declarations: [
