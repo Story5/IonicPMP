@@ -31,7 +31,7 @@ export class HomePage {
         this.takePhoto();
       } else if (e.data.indexOf("getVideo|") > -1) {
         alert(e.data);
-        this.pushAndroidActivity();
+        this.pushAndroidActivity(e.data);
       } else if (e.data == "getVideo1") {
         this.pushAndroidActivity1();
       } else if (e.data == "getVideo2") {
@@ -90,9 +90,9 @@ export class HomePage {
     });
   }
 
-  pushAndroidActivity() {
+  pushAndroidActivity(message? : string) {
     // Send event to Native
-    this.broadcaster.fireNativeEvent('openDevice', {"item":"ionic的值"}).then(() => { 
+    this.broadcaster.fireNativeEvent('openDevice', message).then(() => { 
       console.log('success');
     });
   }
