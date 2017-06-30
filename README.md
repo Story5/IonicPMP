@@ -51,8 +51,8 @@ $ npm install -g ios-sim
 ```
 ## 3.ionic和原生混合
 ### 3.1 mix ionic and ios native
-[iOS WebViews](http://cordova.apache.org/docs/en/latest/guide/platforms/ios/webview.html)
-[ionic移植到iOS原生工程](http://www.jianshu.com/p/fc7da9f26f35)
+* [iOS WebViews](http://cordova.apache.org/docs/en/latest/guide/platforms/ios/webview.html)
+* [ionic移植到iOS原生工程](http://www.jianshu.com/p/fc7da9f26f35)
 
 ### 3.2 mix ionic and android native
 * https://blog.nami.idv.tw/?p=598
