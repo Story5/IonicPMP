@@ -11,7 +11,9 @@ import { Autostart } from '@ionic-native/autostart';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
 import { HTTP } from '@ionic-native/http';
+import { Keyboard } from '@ionic-native/keyboard';
 import { ZBar } from '@ionic-native/zbar';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { ZBar } from '@ionic-native/zbar';
     Broadcaster,
     Camera,
     HTTP,
+    Keyboard,
     ZBar
   ]
 })
