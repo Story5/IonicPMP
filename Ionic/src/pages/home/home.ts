@@ -29,8 +29,11 @@ export class HomePage {
         this.scan2dBarcodes ();
       } else if (e.data == "getPicValue") {
         this.takePhoto();
-      } else if (e.data == "getVideo1") {
+      } else if (e.data.indexOf("getVideo|") > -1) {
+        alert(e.data);
         this.pushAndroidActivity();
+      } else if (e.data == "getVideo1") {
+        this.pushAndroidActivity1();
       } else if (e.data == "getVideo2") {
         this.pushAndroidActivity2();
       } else if (e.data.indexOf("set_jPushTags") > -1) {
@@ -90,6 +93,13 @@ export class HomePage {
   pushAndroidActivity() {
     // Send event to Native
     this.broadcaster.fireNativeEvent('openDevice', {"item":"ionic的值"}).then(() => { 
+      console.log('success');
+    });
+  }
+
+  pushAndroidActivity1() {
+    // Send event to Native
+    this.broadcaster.fireNativeEvent('openDevice1', {"item":"ionic的值"}).then(() => { 
       console.log('success');
     });
   }
