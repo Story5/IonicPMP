@@ -37,9 +37,11 @@ export class HomePage {
       } else if (e.data == "getVideo2") {
         this.pushAndroidActivity("10275");
       } else if (e.data.indexOf("set_jPushTags") > -1) {
-        // this.set_jPushTags(e.data.split('|')[1]);
+        let tags = e.data.split('|')[1];
+        this.set_jPushTags(tags); 
       } else if (e.data.indexOf("set_jPushAlias") > -1) {
-        // this.set_jPushAlias(e.data.split('|')[1]);
+        let alias = e.data.split('|')[1]
+        this.set_jPushAlias(alias);
       }
     }, false);
   }
@@ -110,7 +112,7 @@ export class HomePage {
 		try {
       window['plugins'].jPushPlugin.setTags([ Tags ]);
 		} catch (e) {
-			alert("Set jPushTags Error: " + e);
+			// alert("Set jPushTags Error: " + e);
 		}
 	}
 
@@ -118,7 +120,7 @@ export class HomePage {
 		try {
 			window['plugins'].jPushPlugin.setAlias(alias);
 		} catch (e) {
-			alert("Set jPushAlias Error: " + e);
+			// alert("Set jPushAlias Error: " + e);
 		}
 	}
 }
