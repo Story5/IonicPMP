@@ -99,15 +99,6 @@ export class HomePage {
     });
   }
 
-  backToIonic() {
-    // Listen to events from Native
-    alert("start addEventListener");
-    this.broadcaster.addEventListener('backIonic').subscribe((event) => {
-      console.log(event);
-      alert('success addEventListener');
-    });
-  }
-
   set_jPushTags(Tags) {
 		try {
       window['plugins'].jPushPlugin.setTags([ Tags ]);
