@@ -5,7 +5,7 @@ import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
 import { HTTP } from '@ionic-native/http';
-import { Transfer, FileUploadOptions, TransferObject } from '@ionic-native/transfer';
+import { Transfer, FileUploadOptions, TransferObject, FileUploadResult } from '@ionic-native/transfer';
 import { MediaCapture, MediaFile, MediaFileData, CaptureError, CaptureVideoOptions } from '@ionic-native/media-capture';
 import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
@@ -106,8 +106,11 @@ export class HomePage {
     const fileTransfer: TransferObject = this.transfer.create();
     let url = encodeURI("http://180.168.168.210:8010/mobile/mobile.ashx?type=UploadFile");
     fileTransfer.upload(data.fullPath, url, options)
-    .then((data) => {
-      alert("uploadSuccess:" + data);
+    .then((data : FileUploadResult) => {
+      
+      let iframe = document.getElementById("mainframe");
+      var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
+      iWindow.postMessage("takeVideo:" + data.response, "*");
       // success
     }, (err) => {
       alert("uploadError:" + err);
