@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Broadcaster } from '@ionic-native/broadcaster';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Device } from '@ionic-native/device';
 import { HTTP } from '@ionic-native/http';
 import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
@@ -16,6 +17,7 @@ export class HomePage {
   constructor(public navCtrl: NavController,
               public broadcaster : Broadcaster,
               public camera: Camera,
+              public device: Device,
               public http: HTTP,
               public zbar: ZBar) {
 
@@ -47,10 +49,11 @@ export class HomePage {
   }
 
   returnMobileSystem() {
+    let platform = this.device.platform;
+    alert(platform);
     let iframe = document.getElementById("mainframe");
     var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
-    // iWindow.postMessage("getSystem:" + "android", "*");
-    iWindow.postMessage("getSystem:" + "ios", "*");
+    iWindow.postMessage("getSystem:" + platform, "*");
   }
 
   takePhoto () {

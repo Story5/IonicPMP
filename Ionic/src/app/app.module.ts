@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { Autostart } from '@ionic-native/autostart';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
+import { Device } from '@ionic-native/device';
 import { HTTP } from '@ionic-native/http';
 import { Keyboard } from '@ionic-native/keyboard';
 import { ZBar } from '@ionic-native/zbar';
@@ -36,6 +37,7 @@ import { ZBar } from '@ionic-native/zbar';
     Autostart,
     Broadcaster,
     Camera,
+    Device,
     HTTP,
     Keyboard,
     ZBar
