@@ -50,7 +50,6 @@ export class HomePage {
 
   returnMobileSystem() {
     let platform = this.device.platform;
-    alert(platform);
     let iframe = document.getElementById("mainframe");
     var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
     iWindow.postMessage("getSystem:" + platform, "*");
