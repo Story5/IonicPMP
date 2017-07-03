@@ -12,7 +12,9 @@ import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
 import { HTTP } from '@ionic-native/http';
+import { Transfer } from '@ionic-native/transfer';
 import { Keyboard } from '@ionic-native/keyboard';
+import { MediaCapture } from '@ionic-native/media-capture';
 import { ZBar } from '@ionic-native/zbar';
 
 
@@ -39,7 +41,9 @@ import { ZBar } from '@ionic-native/zbar';
     Camera,
     Device,
     HTTP,
+    Transfer,
     Keyboard,
+    MediaCapture,
     ZBar
   ]
 })

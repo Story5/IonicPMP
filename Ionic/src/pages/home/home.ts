@@ -5,6 +5,8 @@ import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
 import { HTTP } from '@ionic-native/http';
+import { Transfer, FileUploadOptions, TransferObject } from '@ionic-native/transfer';
+import { MediaCapture, MediaFile, MediaFileData, CaptureError, CaptureVideoOptions } from '@ionic-native/media-capture';
 import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
 @Component({
@@ -19,6 +21,8 @@ export class HomePage {
               public camera: Camera,
               public device: Device,
               public http: HTTP,
+              public transfer: Transfer,
+              public mediaCapture: MediaCapture,
               public zbar: ZBar) {
 
   }
@@ -31,6 +35,8 @@ export class HomePage {
         this.scan2dBarcodes ();
       } else if (e.data == "getPicValue") {
         this.takePhoto();
+      } else if (e.data == "takeVideo") {
+        this.takeVideo();
       } else if (e.data.indexOf("getVideo|") > -1) {
         let message = e.data.split("|")[3];
         this.pushAndroidActivity(message);
@@ -73,6 +79,40 @@ export class HomePage {
     }, (err) => {
       // Handl
     });
+  }
+
+  takeVideo(){
+    let options: CaptureVideoOptions = { limit: 1 };
+    this.mediaCapture.captureVideo(options)
+    .then(
+      (dataArray: MediaFile[]) => {
+        var mediaFile = dataArray[0];
+        // alert(JSON.stringify(data));
+        this.upload(mediaFile);
+      },
+      (err: CaptureError) => {
+        alert("CaptureError:" + err);
+      }
+    );
+  }
+
+  upload(data : MediaFile) {
+    let options: FileUploadOptions = {
+      fileKey: 'file',
+      fileName: 'video.mp4',
+      headers: {}
+    }
+
+    const fileTransfer: TransferObject = this.transfer.create();
+    let url = encodeURI("http://180.168.168.210:8010/mobile/mobile.ashx?type=UploadFile");
+    fileTransfer.upload(data.fullPath, url, options)
+    .then((data) => {
+      alert("uploadSuccess:" + data);
+      // success
+    }, (err) => {
+      alert("uploadError:" + err);
+      // error
+    })
   }
 
   scan2dBarcodes () {
