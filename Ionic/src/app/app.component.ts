@@ -23,7 +23,8 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
 
-      
+      // app版本更新
+      this.postAppVersion(1.0);
 
       // 注册返回键
       this.registerBackButtonAction();
@@ -44,6 +45,10 @@ export class MyApp {
      }, 1);
   }
 
- 
+  // 版本更新
+  postAppVersion(version : number) {
+    let iframe = document.getElementById("mainframe");
+    var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
+    iWindow.postMessage("appVersion:" + version, "*");
+  }
 }
-
