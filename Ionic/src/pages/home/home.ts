@@ -6,7 +6,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
 import { HTTP } from '@ionic-native/http';
 import { Transfer, FileUploadOptions, TransferObject, FileUploadResult } from '@ionic-native/transfer';
-import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions, CaptureVideoOptions } from '@ionic-native/media-capture';
+import { MediaCapture, MediaFile, MediaFileData, CaptureError, CaptureVideoOptions } from '@ionic-native/media-capture';
 import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
 @Component({
@@ -34,7 +34,6 @@ export class HomePage {
       } else if (e.data == "getewmvalue") {
         this.scan2dBarcodes ();
       } else if (e.data == "getPicValue") {
-        // this.takePhotoOnPlatform();
         this.takePhoto();
       } else if (e.data == "takeVideo") {
         this.takeVideo();
@@ -62,80 +61,10 @@ export class HomePage {
     iWindow.postMessage("getSystem:" + platform, "*");
   }
 
-  capturePhoto () {
-    let options: CaptureImageOptions = { limit: 1 };
-    this.mediaCapture.captureImage(options)
-    .then(
-      (data: MediaFile[]) => {
-        var mediaFile = data[0];
-        alert("typeof(mediaFile)" + typeof(mediaFile));
-        this.uploadImage(mediaFile);
-
-      },
-      (err: CaptureError) => {
-        alert("CaptureImageError:" + err);
-      }
-    );
-  }
-
-  uploadImage(data : MediaFile) {
-    let options: FileUploadOptions = {
-      fileKey: 'file',
-      fileName: 'video.mp4',
-      headers: {}
-    }
-
-    const fileTransfer: TransferObject = this.transfer.create();
-    let url = encodeURI("http://180.168.168.210:8010/mobile/mobile.ashx?type=UploadFile");
-    fileTransfer.upload(data.fullPath, url, options)
-    .then((data : FileUploadResult) => {
-      
-      let iframe = document.getElementById("mainframe");
-      var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
-      iWindow.postMessage("takeVideo:" + data.response, "*");
-      // success
-    }, (err) => {
-      alert("uploadError:" + err);
-      // error
-    })
-  }
-
-  takePhotoOnPlatform () {
-      if(this.device.platform == "Android") {
-        this.takePhoto();
-      } else if (this.device.platform == "iOS") {
-        // this.takePhotoOniOS();
-        this.capturePhoto();
-      }
-  }
-
-  takePhotoOniOS() {
-    this.broadcaster.addEventListener('iOSPostToIonic').subscribe((event) => {
-          let jsonString = JSON.stringify(event);
-          // alert(jsonString);
-          JSON.parse(jsonString, (key: any, value: any) => 
-          {
-            if (key == "data") {
-              alert("typeOf" + typeof(value));
-              // alert("parse: " + value);
-              let iframe = document.getElementById("mainframe");
-              var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
-              iWindow.postMessage("getPicValue:" + value, "*");
-              
-            }
-          })
-          
-        });
-    this.broadcaster.fireNativeEvent('takePicture', { param : "message" }).then(() => { 
-      console.log('success');
-    });
-  }
-
   takePhoto () {
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
-      sourceType: this.camera.PictureSourceType.CAMERA,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
     }
@@ -152,7 +81,6 @@ export class HomePage {
     });
   }
 
-  
   takeVideo(){
     let options: CaptureVideoOptions = { limit: 1 };
     this.mediaCapture.captureVideo(options)
