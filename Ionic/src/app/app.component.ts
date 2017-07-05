@@ -13,7 +13,7 @@ import { Keyboard } from '@ionic-native/keyboard';
 export class MyApp {
   rootPage:any = HomePage;
 
-  constructor(platform: Platform, 
+  constructor(public platform: Platform, 
               statusBar: StatusBar, 
               splashScreen: SplashScreen,
               keyboard: Keyboard) {
@@ -23,11 +23,27 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
 
+      
+
+      // 注册返回键
+      this.registerBackButtonAction();
+
       // 解决iOS选择器弹出不显示done按钮问题
       keyboard.hideKeyboardAccessoryBar(false);
 
       window['plugins'].jPushPlugin.init();
     });
   }
+
+  registerBackButtonAction() {
+     this.platform.registerBackButtonAction(() => {
+      // alert("back");
+      let iframe = document.getElementById("mainframe");
+      var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
+      iWindow.postMessage("setBack:" + "android", "*");
+     }, 1);
+  }
+
+ 
 }
 
