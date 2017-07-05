@@ -6,7 +6,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
 import { HTTP } from '@ionic-native/http';
 import { Transfer, FileUploadOptions, TransferObject, FileUploadResult } from '@ionic-native/transfer';
-import { MediaCapture, MediaFile, MediaFileData, CaptureError, CaptureVideoOptions } from '@ionic-native/media-capture';
+import { MediaCapture, MediaFile, CaptureError, CaptureVideoOptions } from '@ionic-native/media-capture';
 import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
 @Component({
