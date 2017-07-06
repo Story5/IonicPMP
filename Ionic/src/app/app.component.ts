@@ -26,12 +26,10 @@ export class MyApp {
       splashScreen.hide();
 
       // 锁定竖屏
-      screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT_PRIMARY);
+      screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT);
 
       // app版本更新
       this.postAppVersion(1.0);
-
-      
 
       // 注册返回键
       this.registerBackButtonAction();
