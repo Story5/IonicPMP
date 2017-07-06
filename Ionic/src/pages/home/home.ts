@@ -103,12 +103,16 @@ export class HomePage {
       headers: {}
     }
 
+    let iframe = document.getElementById("mainframe");
+    let srcAddress = (<HTMLIFrameElement>iframe).src;
+    let ipAddress = srcAddress.split("/")[2];
+
     const fileTransfer: TransferObject = this.transfer.create();
-    let url = encodeURI("http://180.168.168.210:8010/mobile/mobile.ashx?type=UploadFile");
+    let url = encodeURI("http://" + ipAddress + "/mobile/mobile.ashx?type=UploadFile");
     fileTransfer.upload(data.fullPath, url, options)
     .then((data : FileUploadResult) => {
       
-      let iframe = document.getElementById("mainframe");
+      
       var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
       iWindow.postMessage("takeVideo:" + data.response, "*");
       // success
