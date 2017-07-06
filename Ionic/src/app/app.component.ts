@@ -36,6 +36,15 @@ export class MyApp {
     });
   }
 
+  ngOnInit() {
+    window.addEventListener("message", (e) => {
+      if (e.data == "setBack") {
+        alert("h5setBack");
+        this.platform.exitApp();
+      }
+    }, false);
+  }
+
   registerBackButtonAction() {
      this.platform.registerBackButtonAction(() => {
       // alert("back");
