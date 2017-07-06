@@ -14,6 +14,7 @@ import { HTTP } from '@ionic-native/http';
 import { Transfer } from '@ionic-native/transfer';
 import { Keyboard } from '@ionic-native/keyboard';
 import { MediaCapture } from '@ionic-native/media-capture';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { ZBar } from '@ionic-native/zbar';
 
 
@@ -42,6 +43,7 @@ import { ZBar } from '@ionic-native/zbar';
     Transfer,
     Keyboard,
     MediaCapture,
+    ScreenOrientation,
     ZBar
   ]
 })
