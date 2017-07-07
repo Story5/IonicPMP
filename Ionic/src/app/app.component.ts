@@ -26,7 +26,7 @@ export class MyApp {
       splashScreen.hide();
 
       // 锁定竖屏
-      screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT);
+      screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT_PRIMARY);
 
       // app版本更新
       this.postAppVersion(1.0);
