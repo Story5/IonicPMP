@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">工程管控平台</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="csZbarScannerTitle">Scan QR Code</string>
+    <string name="csZbarScannerInstructions">Please point your camera at the QR code.</string>
+    <color name="csZbarScannerTextColor">#ffffff</color>
+    <color name="csZbarScannerTextBackground">#88000000</color>
+    <color name="csZbarScannerBackground">#000000</color>
+</resources>

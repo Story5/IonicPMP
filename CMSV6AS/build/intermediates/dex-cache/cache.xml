@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/libs/jcore-android_v1.1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e872ea5454bca71af461e037dd07c4ca9e73dcf4">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/2/jcore-android_v1.1.3_442e4b962e01a1301159b7c65f9c7900ee5b7782/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fd8dc214ed3ac1684572e25a2d6705c8695d9aee">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f3ea42feb9ab4e28e8aa8cb229b103ab1b093089/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_76b55610e7816471fd2efb072271b2d0263ccb09/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/libs/cordova-6.2.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="82bdca899fbd98673a90b55de03408fc29882671">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/pre-dexed/release/cordova-6.2.3_775c93d15991b9425a665b3e71ab122bcd69ed70.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/libs/zbar.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7bbdf7ba57a8a157c0cad51e455609c70887812e">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/pre-dexed/release/zbar_b49db0d9119418ca9d00d7d64232982d8c461766.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/libs/cordova-6.2.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="82bdca899fbd98673a90b55de03408fc29882671">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/2/cordova-6.2.3_775c93d15991b9425a665b3e71ab122bcd69ed70/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/libs/jpush-android_v3.0.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cc50cc7009c634f3222609dae2d60d5ad888015a">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/2/jpush-android_v3.0.6_6881a356a5fe89bf1c437d2eedfa035557008ab4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/libs/zbar.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7bbdf7ba57a8a157c0cad51e455609c70887812e">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/2/zbar_b49db0d9119418ca9d00d7d64232982d8c461766/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/libs/jpush-android_v3.0.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cc50cc7009c634f3222609dae2d60d5ad888015a">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/pre-dexed/release/jpush-android_v3.0.6_6881a356a5fe89bf1c437d2eedfa035557008ab4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/libs/jcore-android_v1.1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e872ea5454bca71af461e037dd07c4ca9e73dcf4">
+        <dex dex="/Users/Story5/Story5/01Project/GitHub/PMPA-I/CMSV6AS/app/build/intermediates/pre-dexed/release/jcore-android_v1.1.3_442e4b962e01a1301159b7c65f9c7900ee5b7782.jar" />
+    </item>
+
+</items>
