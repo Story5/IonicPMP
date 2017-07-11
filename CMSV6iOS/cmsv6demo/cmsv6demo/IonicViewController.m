@@ -24,7 +24,8 @@
 
     [self addNotification];
     
-    [self setTags:nil alias:@"张迅杰"];
+    NSSet *set = [[NSSet alloc] initWithObjects:@"by", nil];
+    [self setTags:set alias:@"张迅杰"];
 }
 
 - (void)viewWillAppear:(BOOL)animated

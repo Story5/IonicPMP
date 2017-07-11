@@ -94,6 +94,7 @@
 		1832DF519E9DC62198D84D8A77BDA955 /* CDVCommandQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVCommandQueue.h; path = CordovaLib/Classes/Public/CDVCommandQueue.h; sourceTree = "<group>"; };
 		1B35BCD2A8104BFA54C112046259ADEE /* CDVJSON_private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVJSON_private.m; path = CordovaLib/Classes/Private/CDVJSON_private.m; sourceTree = "<group>"; };
 		235072DD9A8ADFFD1BF0F119C51C336B /* Cordova.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cordova.xcconfig; sourceTree = "<group>"; };
+		262ECE50439F7E12F7821CB62175C55A /* libjcore-ios-1.1.5.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = "libjcore-ios-1.1.5.a"; sourceTree = "<group>"; };
 		28079D5A8D65C69FCCBD5747B8FC1128 /* JPUSHService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		373F9BCB237CFAE0EC93B7150FC6E9FF /* CDVInvokedUrlCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVInvokedUrlCommand.h; path = CordovaLib/Classes/Public/CDVInvokedUrlCommand.h; sourceTree = "<group>"; };
 		3D565F06C4D30A7A5C461470BDAA8D7B /* CDVUIWebViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVUIWebViewDelegate.h; path = CordovaLib/Classes/Private/Plugins/CDVUIWebViewEngine/CDVUIWebViewDelegate.h; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		667349E6CA8BE91CE448FAF7AA40C307 /* CDVPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVPlugin.m; path = CordovaLib/Classes/Public/CDVPlugin.m; sourceTree = "<group>"; };
 		671B35AFE452231C10FAB774FB7DF71A /* Pods-cmsv6demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-cmsv6demo-resources.sh"; sourceTree = "<group>"; };
 		6824AEBAE41B1F42BF3350352DE66603 /* CDVURLProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVURLProtocol.h; path = CordovaLib/Classes/Public/CDVURLProtocol.h; sourceTree = "<group>"; };
-		6E07308FB19C69473C6D619D5F6B0DA9 /* libjcore-ios-1.1.3.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = "libjcore-ios-1.1.3.a"; sourceTree = "<group>"; };
 		6F62096FCC9EE0FCB757DDFAC15ED129 /* CDVUIWebViewNavigationDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVUIWebViewNavigationDelegate.m; path = CordovaLib/Classes/Private/Plugins/CDVUIWebViewEngine/CDVUIWebViewNavigationDelegate.m; sourceTree = "<group>"; };
 		710A0CD80DECD4EC6E94BA99DB86FB5E /* Pods-cmsv6demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-cmsv6demo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		726E8E3D096862CC31DC871397BCBAEF /* CDVJSON_private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVJSON_private.h; path = CordovaLib/Classes/Private/CDVJSON_private.h; sourceTree = "<group>"; };
@@ -148,9 +148,9 @@
 		D4E6E0EF2949DAFD7E1A3627C58EC5B8 /* CDVPluginResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVPluginResult.h; path = CordovaLib/Classes/Public/CDVPluginResult.h; sourceTree = "<group>"; };
 		D54BA6436F17846773AFDCF97E7A913D /* CDVConfigParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVConfigParser.h; path = CordovaLib/Classes/Public/CDVConfigParser.h; sourceTree = "<group>"; };
 		D57D67D560AACADD3D268F86BEC4DB0A /* CDVGestureHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVGestureHandler.m; path = CordovaLib/Classes/Private/Plugins/CDVGestureHandler/CDVGestureHandler.m; sourceTree = "<group>"; };
-		E11F562307347D038603E3D5F7A784A5 /* libjpush-ios-3.0.5.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = "libjpush-ios-3.0.5.a"; sourceTree = "<group>"; };
 		E2BF91C7B2D65528F419F26196CB8D3B /* CDV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDV.h; path = CordovaLib/Classes/Public/CDV.h; sourceTree = "<group>"; };
 		E2DEC4B2C53C8BF7D0E911C1A97DA815 /* CDVInvokedUrlCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVInvokedUrlCommand.m; path = CordovaLib/Classes/Public/CDVInvokedUrlCommand.m; sourceTree = "<group>"; };
+		E9367CBF3D0931F6819A3786DA6D83DD /* libjpush-ios-3.0.6.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = "libjpush-ios-3.0.6.a"; sourceTree = "<group>"; };
 		EB0B66744DD5FB980E6C635A363D7043 /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+QueueAdditions.m"; path = "CordovaLib/Classes/Public/NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
 		F11B2FA177D3153C02541B111FD2C82A /* CDVDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVDebug.h; path = CordovaLib/Classes/Private/CDVDebug.h; sourceTree = "<group>"; };
 		F2559C6D7428FA4B6482911BB21281CA /* CDVIntentAndNavigationFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVIntentAndNavigationFilter.m; path = CordovaLib/Classes/Private/Plugins/CDVIntentAndNavigationFilter/CDVIntentAndNavigationFilter.m; sourceTree = "<group>"; };
@@ -187,6 +187,22 @@
 			isa = PBXGroup;
 			children = (
 				3A89414324057E51FD49A69BE6F541A2 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21AFBE3C0B2056569EB9C9ABE348B695 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9367CBF3D0931F6819A3786DA6D83DD /* libjpush-ios-3.0.6.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		232F0E33B751387D4C790E44687CAC05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				262ECE50439F7E12F7821CB62175C55A /* libjcore-ios-1.1.5.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -316,18 +332,10 @@
 		AA6059E0A2CF1F879B05B4F656925D07 /* JCore */ = {
 			isa = PBXGroup;
 			children = (
-				F321076AEA70649C81F2A137E0A2F747 /* Frameworks */,
+				232F0E33B751387D4C790E44687CAC05 /* Frameworks */,
 			);
 			name = JCore;
 			path = JCore;
-			sourceTree = "<group>";
-		};
-		AD31DC58754ED5E7F4545E93D819D795 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E11F562307347D038603E3D5F7A784A5 /* libjpush-ios-3.0.5.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B6E42563300E2AAE189A6D57AD2DFE9F /* Products */ = {
@@ -343,7 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				28079D5A8D65C69FCCBD5747B8FC1128 /* JPUSHService.h */,
-				AD31DC58754ED5E7F4545E93D819D795 /* Frameworks */,
+				21AFBE3C0B2056569EB9C9ABE348B695 /* Frameworks */,
 			);
 			name = JPush;
 			path = JPush;
@@ -355,14 +363,6 @@
 				8DCE005740625C114558414404DFE776 /* Pods-cmsv6demo */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F321076AEA70649C81F2A137E0A2F747 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6E07308FB19C69473C6D619D5F6B0DA9 /* libjcore-ios-1.1.3.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -166,7 +166,13 @@
             advertisingIdentifier:advertisingId];
     
     [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
-        NSLog(@"registrationID = %@",registrationID);
+        if (resCode == 0) {
+            NSLog(@"registrationID获取成功");
+            NSLog(@"registrationID = %@",registrationID);
+        } else {
+            NSLog(@"registrationID获取失败");
+        }
+        
     }];
 }
 
