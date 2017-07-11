@@ -157,10 +157,8 @@ export class HomePage {
 	}
 
 	set_jPushAlias(alias) {
-		try {
-			window['plugins'].jPushPlugin.setAlias(alias);
-		} catch (e) {
-			// alert("Set jPushAlias Error: " + e);
-		}
+		this.broadcaster.fireNativeEvent('setAlias', { param : alias }).then(() => { 
+      alert("fire alias success");
+    });
 	}
 }

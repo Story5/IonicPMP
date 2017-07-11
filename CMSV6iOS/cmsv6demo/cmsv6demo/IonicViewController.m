@@ -23,9 +23,6 @@
     self.startPage = @"index.html";
 
     [self addNotification];
-    
-    NSSet *set = [[NSSet alloc] initWithObjects:@"by", nil];
-    [self setTags:set alias:@"张迅杰"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -52,17 +49,17 @@
                                                       [self pushDevice:deviceId];
                                                   }];
     
-    [[NSNotificationCenter defaultCenter] addObserverForName:@"takePicture"
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"setAlias"
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *notification) {
                                                       
                                                       NSDictionary *paramDic = notification.userInfo;
                                                       NSLog(@"Handled 'test.event' [%@]", notification.userInfo[@"param"]);
-                                                      [self takePicture];
+                                                      NSString *alias = [paramDic objectForKey:@"param"];
+                                                      [self setAlias:alias];
                                                   }];
-    
-    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -106,19 +103,15 @@
 
 
 #pragma mark - JPush
-- (void)setTags:(NSSet *)tags alias:(NSString *)alias
+- (void)setAlias:(NSString *)alias
 {
-    if (tags == nil || [tags isEqualToSet:[NSSet set]]) {
-        tags = [NSSet setWithObject:@"iOSTags"];
-    }
-    
     if (alias == nil || [alias isEqualToString:@""]) {
         alias = @"iOSAlias";
     }
     
-    [JPUSHService setTags:tags alias:alias fetchCompletionHandle:^(int iResCode, NSSet *iTags, NSString *iAlias) {
-        NSLog(@"\niResCode\t:\t%d\niTags\t:\t%@\niAlias\t:\t%@",iResCode,iTags,iAlias);
-    }];
+    [JPUSHService setAlias:alias completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+        NSLog(@"\niResCode:%ld\niAlias:%@\nseq:%ld",iResCode,iAlias,seq);
+    } seq:0];
 }
 
 /*
