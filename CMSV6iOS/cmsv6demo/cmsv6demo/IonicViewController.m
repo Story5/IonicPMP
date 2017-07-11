@@ -60,6 +60,18 @@
                                                       NSString *alias = [paramDic objectForKey:@"param"];
                                                       [self setAlias:alias];
                                                   }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"setTags"
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      
+                                                      NSDictionary *paramDic = notification.userInfo;
+                                                      NSLog(@"Handled 'test.event' [%@]", notification.userInfo[@"param"]);
+                                                      NSString *tagString = [paramDic objectForKey:@"param"];
+                                                      NSSet *tagSet = [[NSSet alloc] initWithObjects:tagString, nil];
+                                                      [self setTags:tagSet];
+                                                  }];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -111,6 +123,13 @@
     
     [JPUSHService setAlias:alias completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
         NSLog(@"\niResCode:%ld\niAlias:%@\nseq:%ld",iResCode,iAlias,seq);
+    } seq:0];
+}
+
+- (void)setTags:(NSSet *)tags
+{
+    [JPUSHService setTags:tags completion:^(NSInteger iResCode, NSSet *iTags, NSInteger seq) {
+        NSLog(@"\niResCode:%ld\niTags:%@\nseq:%ld",iResCode,iTags,seq);
     } seq:0];
 }
 

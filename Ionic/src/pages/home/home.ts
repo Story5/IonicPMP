@@ -40,19 +40,13 @@ export class HomePage {
       } else if (e.data.indexOf("getVideo|") > -1) {
         let message = e.data.split("|")[3];
         this.pushAndroidActivity(message);
-      } else if (e.data == "getVideo1") {
-        this.pushAndroidActivity("10250");
-      } else if (e.data == "getVideo2") {
-        this.pushAndroidActivity("10275");
-      } else if (e.data.indexOf("set_jPushTags") > -1) {
-        let tags = e.data.split('|')[1];
-        // alert("tags : " + tags);
-        this.set_jPushTags(tags); 
       } else if (e.data.indexOf("set_jPushAlias") > -1) {
         let alias = e.data.split('|')[1]
-        // alert("alias : " + alias);
         this.set_jPushAlias(alias);
-      }
+      } else if (e.data.indexOf("set_jPushTags") > -1) {
+        let tags = e.data.split('|')[1];
+        this.set_jPushTags(tags); 
+      } 
     }, false);
   }
 
@@ -148,17 +142,15 @@ export class HomePage {
     });
   }
 
-  set_jPushTags(Tags) {
-		try {
-      window['plugins'].jPushPlugin.setTags([ Tags ]);
-		} catch (e) {
-			// alert("Set jPushTags Error: " + e);
-		}
-	}
-
-	set_jPushAlias(alias) {
+  set_jPushAlias(alias) {
 		this.broadcaster.fireNativeEvent('setAlias', { param : alias }).then(() => { 
       alert("fire alias success");
+    });
+	}
+
+  set_jPushTags(tags) {
+		this.broadcaster.fireNativeEvent('setTags', { param : tags }).then(() => { 
+      alert("fire tags success");
     });
 	}
 }
