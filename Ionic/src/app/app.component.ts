@@ -44,7 +44,6 @@ export class MyApp {
   ngOnInit() {
     window.addEventListener("message", (e) => {
       if (e.data == "setBack") {
-        alert("h5setBack");
         this.platform.exitApp();
       }
     }, false);

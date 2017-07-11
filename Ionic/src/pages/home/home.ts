@@ -46,11 +46,11 @@ export class HomePage {
         this.pushAndroidActivity("10275");
       } else if (e.data.indexOf("set_jPushTags") > -1) {
         let tags = e.data.split('|')[1];
-        alert("tags" + tags);
+        // alert("tags : " + tags);
         this.set_jPushTags(tags); 
       } else if (e.data.indexOf("set_jPushAlias") > -1) {
         let alias = e.data.split('|')[1]
-        alert("alias" + alias);
+        // alert("alias : " + alias);
         this.set_jPushAlias(alias);
       }
     }, false);
