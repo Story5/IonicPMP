@@ -1,7 +1,9 @@
 package com.cmsv6demo;
 
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -14,7 +16,11 @@ import android.widget.Toast;
 import org.apache.cordova.CordovaActivity;
 import org.apache.cordova.engine.SystemWebView;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import cn.jpush.android.api.JPushInterface;
+import cn.jpush.android.api.TagAliasCallback;
 
 public class TestCordovaActivity extends CordovaActivity {
     @Override
@@ -40,6 +46,30 @@ public class TestCordovaActivity extends CordovaActivity {
             }
         };
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver,new IntentFilter("openDevice"));
+
+        final BroadcastReceiver receiver2 = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                String userdata = intent.getExtras().getString("userdata");
+                String alias = userdata.split("\"")[3].split(("\""))[0];
+                JPushInterface.setAlias(context, alias, null);
+                Toast.makeText(context,"跳转:"+alias,Toast.LENGTH_SHORT).show();
+            }
+        };
+        LocalBroadcastManager.getInstance(this).registerReceiver(receiver2,new IntentFilter("setAlias"));
+
+        final BroadcastReceiver receiver3 = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                String userdata = intent.getExtras().getString("userdata");
+                String tags = userdata.split("\"")[3].split(("\""))[0];
+                Set<String> set = new HashSet<>();
+                set.add(tags);
+                JPushInterface.setTags(context,set,null);
+                Toast.makeText(context,"跳转:"+tags,Toast.LENGTH_SHORT).show();
+            }
+        };
+        LocalBroadcastManager.getInstance(this).registerReceiver(receiver3,new IntentFilter("setTags"));
 
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);

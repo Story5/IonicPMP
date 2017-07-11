@@ -144,13 +144,13 @@ export class HomePage {
 
   set_jPushAlias(alias) {
 		this.broadcaster.fireNativeEvent('setAlias', { param : alias }).then(() => { 
-      alert("fire alias success");
+      console.log("fire alias success");
     });
 	}
 
   set_jPushTags(tags) {
 		this.broadcaster.fireNativeEvent('setTags', { param : tags }).then(() => { 
-      alert("fire tags success");
+      console.log("fire tags success");
     });
 	}
 }
