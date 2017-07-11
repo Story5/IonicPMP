@@ -70,8 +70,8 @@
 		7574D4E01F0E3DD60064F299 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7574D4C41F0E3DD50064F299 /* IonicKeyboard.m */; };
 		7574D4E11F0E3DD60064F299 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 7574D4C51F0E3DD50064F299 /* README */; };
 		7574D4E31F0E3DE50064F299 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7574D4E21F0E3DE50064F299 /* config.xml */; };
+		7574D4F01F147CFD0064F299 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 7574D4EF1F147CFD0064F299 /* www */; };
 		759063991ED67F89003C1C48 /* ConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759063981ED67F89003C1C48 /* ConfigView.m */; };
-		7596B4311F0AC7A800737C4E /* www in Resources */ = {isa = PBXBuildFile; fileRef = 7596B4301F0AC7A800737C4E /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,9 +195,9 @@
 		7574D4C41F0E3DD50064F299 /* IonicKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonicKeyboard.m; sourceTree = "<group>"; };
 		7574D4C51F0E3DD50064F299 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		7574D4E21F0E3DE50064F299 /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
+		7574D4EF1F147CFD0064F299 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../../Ionic/platforms/ios/www; sourceTree = "<group>"; };
 		759063971ED67F89003C1C48 /* ConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigView.h; sourceTree = "<group>"; };
 		759063981ED67F89003C1C48 /* ConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigView.m; sourceTree = "<group>"; };
-		7596B4301F0AC7A800737C4E /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../../../PMPIonic/Ionic/platforms/ios/www; sourceTree = "<group>"; };
 		75B7B5AD1F08996A0062E9AC /* cmsv6demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cmsv6demo.entitlements; sourceTree = "<group>"; };
 		C8D54DDE7E693054CA840A52 /* Pods-cmsv6demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmsv6demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cmsv6demo/Pods-cmsv6demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,9 +293,9 @@
 		18912D0F17FAB67600BEA969 /* cmsv6demo */ = {
 			isa = PBXGroup;
 			children = (
+				7574D4EF1F147CFD0064F299 /* www */,
 				7574D4E21F0E3DE50064F299 /* config.xml */,
 				7574D46C1F0E3DD50064F299 /* Plugins */,
-				7596B4301F0AC7A800737C4E /* www */,
 				75B7B5AD1F08996A0062E9AC /* cmsv6demo.entitlements */,
 				18912D1817FAB67600BEA969 /* AppDelegate.h */,
 				18912D1917FAB67600BEA969 /* AppDelegate.m */,
@@ -592,8 +592,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18912D2017FAB67600BEA969 /* Main_iPad.storyboard in Resources */,
+				7574D4F01F147CFD0064F299 /* www in Resources */,
 				7574D4E31F0E3DE50064F299 /* config.xml in Resources */,
-				7596B4311F0AC7A800737C4E /* www in Resources */,
 				18912D2517FAB67600BEA969 /* Images.xcassets in Resources */,
 				18912D1D17FAB67600BEA969 /* Main_iPhone.storyboard in Resources */,
 				18912D1417FAB67600BEA969 /* InfoPlist.strings in Resources */,
