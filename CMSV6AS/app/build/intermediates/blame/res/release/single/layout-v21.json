@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/Story5/.android/build-cache/cc23787a8bba64353771f2fb38f41bd71cacbaa2/output/res/layout-v21/notification_action.xml"
+    }
+]
