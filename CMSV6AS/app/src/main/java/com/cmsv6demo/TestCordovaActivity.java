@@ -53,7 +53,7 @@ public class TestCordovaActivity extends CordovaActivity {
                 String userdata = intent.getExtras().getString("userdata");
                 String alias = userdata.split("\"")[3].split(("\""))[0];
                 JPushInterface.setAlias(context, alias, null);
-                Toast.makeText(context,"跳转:"+alias,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context,"跳转:"+alias,Toast.LENGTH_SHORT).show();
             }
         };
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver2,new IntentFilter("setAlias"));
@@ -66,7 +66,7 @@ public class TestCordovaActivity extends CordovaActivity {
                 Set<String> set = new HashSet<>();
                 set.add(tags);
                 JPushInterface.setTags(context,set,null);
-                Toast.makeText(context,"跳转:"+tags,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context,"跳转:"+tags,Toast.LENGTH_SHORT).show();
             }
         };
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver3,new IntentFilter("setTags"));
