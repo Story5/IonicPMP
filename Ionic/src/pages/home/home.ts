@@ -87,7 +87,8 @@ export class HomePage {
         this.uploadVideo(mediaFile);
       },
       (err: CaptureError) => {
-        alert("CaptureError:" + err);
+        alert("捕获照片失败!");
+        // alert("CaptureError:" + err);
       }
     );
   }
@@ -113,7 +114,8 @@ export class HomePage {
       iWindow.postMessage("takeVideo:" + data.response, "*");
       // success
     }, (err) => {
-      alert("uploadError:" + err);
+      alert("上传视频失败!");
+      // alert("uploadError:" + err);
       // error
     })
   }
@@ -131,7 +133,8 @@ export class HomePage {
       iWindow.postMessage("getewmvalue:" + result, "*");
     })
     .catch(error => {
-      alert("Scanning failed: " + error); // Error message
+      alert("扫描二维码失败!");
+      // alert("Scanning failed: " + error); // Error message
     });
   }
 
