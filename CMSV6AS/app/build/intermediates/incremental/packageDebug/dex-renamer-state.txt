@@ -1,4 +1,4 @@
-#Wed Jul 12 17:37:39 CST 2017
+#Thu Jul 13 10:36:37 CST 2017
 base.0=/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6504f80321ceea5ca735f6f2284cc7511d650dbf
 renamed.1=classes2.dex
 renamed.0=classes.dex

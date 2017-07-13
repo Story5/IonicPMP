@@ -1,15 +1,12 @@
 package com.cmsv6demo;
 
-import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
@@ -37,7 +34,7 @@ public class TestCordovaActivity extends CordovaActivity {
                 String userdata = intent.getExtras().getString("userdata");
                 String deviceId = userdata.split("\"")[3].split(("\""))[0];
 
-//                Toast.makeText(context,"跳转"+deviceId,Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,"跳转"+deviceId,Toast.LENGTH_SHORT).show();
                 Log.v("onReceive","我收到消息啦");
                 Intent intent1 = new Intent();
                 intent1.setClass(TestCordovaActivity.this,DeviceActivity.class);
