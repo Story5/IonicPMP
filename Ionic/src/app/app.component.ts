@@ -36,8 +36,6 @@ export class MyApp {
 
       // 解决iOS选择器弹出不显示done按钮问题
       keyboard.hideKeyboardAccessoryBar(false);
-
-      window['plugins'].jPushPlugin.init();
     });
   }
 
