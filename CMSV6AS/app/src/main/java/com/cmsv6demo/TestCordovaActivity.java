@@ -17,7 +17,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import cn.jpush.android.api.JPushInterface;
-import cn.jpush.android.api.TagAliasCallback;
+
 
 public class TestCordovaActivity extends CordovaActivity {
     @Override
