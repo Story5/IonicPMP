@@ -5,7 +5,7 @@ import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
 import { FileTransfer, FileUploadOptions, FileTransferObject, FileUploadResult } from '@ionic-native/file-transfer';
-import { MediaCapture, MediaFile, CaptureError, CaptureVideoOptions } from '@ionic-native/media-capture';
+import { MediaCapture, MediaFile, CaptureError, CaptureVideoOptions, CaptureAudioOptions } from '@ionic-native/media-capture';
 import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
 @Component({
@@ -31,7 +31,8 @@ export class HomePage {
       } else if (e.data == "getPicValue") {
         this.takePhoto();
       } else if (e.data == "takeVideo") {
-        this.captureVideo();
+        // this.captureVideo();
+        this.captureAudio();
       } else if (e.data == "getewmvalue") {
         this.scan2dBarcodes ();
       } else if (e.data.indexOf("getVideo|") > -1) {
@@ -73,6 +74,22 @@ export class HomePage {
       // Handl
     });
   }
+  
+  captureAudio(){
+    let options: CaptureAudioOptions = { limit: 1 };
+    this.mediaCapture.captureAudio(options)
+    .then(
+      (dataArray: MediaFile[]) => {
+        var mediaFile = dataArray[0];
+        // alert(JSON.stringify(data));
+        this.uploadMediaFile(mediaFile);
+      },
+      (err: CaptureError) => {
+        alert("录音失败!");
+        // alert("CaptureError:" + err);
+      }
+    );
+  }
 
   captureVideo(){
     let options: CaptureVideoOptions = { limit: 1 };
@@ -81,16 +98,16 @@ export class HomePage {
       (dataArray: MediaFile[]) => {
         var mediaFile = dataArray[0];
         // alert(JSON.stringify(data));
-        this.uploadVideo(mediaFile);
+        this.uploadMediaFile(mediaFile);
       },
       (err: CaptureError) => {
-        alert("捕获照片失败!");
+        alert("录制视频失败!");
         // alert("CaptureError:" + err);
       }
     );
   }
 
-  uploadVideo(data : MediaFile) {
+  uploadMediaFile(data : MediaFile) {
     let options: FileUploadOptions = {
       fileKey: 'file',
       fileName: 'video.mp4',
@@ -111,7 +128,7 @@ export class HomePage {
       iWindow.postMessage("takeVideo:" + data.response, "*");
       // success
     }, (err) => {
-      alert("上传视频失败!");
+      alert("上传媒体文件失败!");
       // alert("uploadError:" + err);
       // error
     })
