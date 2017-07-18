@@ -31,7 +31,7 @@ export class HomePage {
       } else if (e.data == "getPicValue") {
         this.takePhoto();
       } else if (e.data == "takeVideo") {
-        this.takeVideo();
+        this.captureVideo();
       } else if (e.data == "getewmvalue") {
         this.scan2dBarcodes ();
       } else if (e.data.indexOf("getVideo|") > -1) {
@@ -74,7 +74,7 @@ export class HomePage {
     });
   }
 
-  takeVideo(){
+  captureVideo(){
     let options: CaptureVideoOptions = { limit: 1 };
     this.mediaCapture.captureVideo(options)
     .then(
