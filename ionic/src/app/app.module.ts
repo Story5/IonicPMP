@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
@@ -11,7 +12,6 @@ import { FileTransfer } from '@ionic-native/file-transfer';
 import { Keyboard } from '@ionic-native/keyboard';
 import { MediaCapture } from '@ionic-native/media-capture';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
-import { ZBar } from '@ionic-native/zbar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -34,14 +34,14 @@ import { HomePage } from '../pages/home/home';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BarcodeScanner,
     Broadcaster,
     Camera,
     Device,
     FileTransfer,
     Keyboard,
     MediaCapture,
-    ScreenOrientation,
-    ZBar
+    ScreenOrientation
   ]
 })
 export class AppModule {}

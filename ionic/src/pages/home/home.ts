@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
 import { FileTransfer, FileUploadOptions, FileTransferObject, FileUploadResult } from '@ionic-native/file-transfer';
 import { MediaCapture, MediaFile, CaptureError, CaptureVideoOptions, CaptureAudioOptions } from '@ionic-native/media-capture';
-import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
 @Component({
   selector: 'page-home',
@@ -15,12 +15,12 @@ import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 export class HomePage {
 
   constructor(public navCtrl: NavController,
+              public barcodeScanner: BarcodeScanner,
               public broadcaster : Broadcaster,
               public camera: Camera,
               public device: Device,
               public transfer: FileTransfer,
-              public mediaCapture: MediaCapture,
-              public zbar: ZBar) {
+              public mediaCapture: MediaCapture) {
 
   }
 
@@ -34,7 +34,7 @@ export class HomePage {
         // this.captureVideo();
         this.captureAudio();
       } else if (e.data == "getewmvalue") {
-        this.scan2dBarcodes ();
+        this.barcodeScannerScan ();
       } else if (e.data.indexOf("getVideo|") > -1) {
         let message = e.data.split("|")[3];
         this.pushAndroidActivity(message);
@@ -134,22 +134,20 @@ export class HomePage {
     })
   }
 
-  scan2dBarcodes () {
-    let options: ZBarOptions = {
-      flash: 'off',
-      drawSight: false
-    };
-
-    this.zbar.scan(options)
-    .then(result => {
-      let iframe = document.getElementById("mainframe");
-      var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
-      iWindow.postMessage("getewmvalue:" + result, "*");
-    })
-    .catch(error => {
-      alert("扫描二维码失败!");
-      // alert("Scanning failed: " + error); // Error message
+  barcodeScannerScan() {
+    this.barcodeScanner.scan().then((barcodeData : BarcodeScanResult) => {
+      // Success! Barcode data is here
+      this.postQRString(barcodeData.text);
+    }, (err) => {
+        // An error occurred
+        alert("扫描二维码失败!");
     });
+  }
+
+  postQRString(text : string) {
+    let iframe = document.getElementById("mainframe");
+    var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
+    iWindow.postMessage("getewmvalue:" + text, "*");
   }
 
   pushAndroidActivity(message? : string) {
