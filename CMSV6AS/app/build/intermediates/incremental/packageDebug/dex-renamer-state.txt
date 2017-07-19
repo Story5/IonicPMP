@@ -1,7 +1,0 @@
-#Fri Jul 14 16:58:52 CST 2017
-base.0=/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6504f80321ceea5ca735f6f2284cc7511d650dbf
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_61cfb9b5567a421f41acd1e6a9e3024da5f210a5/classes.dex
-base.1=/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_61cfb9b5567a421f41acd1e6a9e3024da5f210a5
-file.0=/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6504f80321ceea5ca735f6f2284cc7511d650dbf/classes.dex

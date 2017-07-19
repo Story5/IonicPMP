@@ -1,4 +1,0 @@
-#Thu Jul 13 15:53:41 CST 2017
-base.0=/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/transforms/dex/release/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/Story5/Story5/01Project/GitHub/PMPBY/CMSV6AS/app/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex
