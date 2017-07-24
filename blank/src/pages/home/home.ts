@@ -5,8 +5,12 @@ import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
-import { FileTransfer, FileUploadOptions, FileTransferObject, FileUploadResult } from '@ionic-native/file-transfer';
-import { MediaCapture, MediaFile, CaptureError, CaptureVideoOptions, CaptureAudioOptions } from '@ionic-native/media-capture';
+import { File } from '@ionic-native/file';
+import { FileTransfer, FileUploadOptions, FileTransferObject, FileUploadResult, FileTransferError } from '@ionic-native/file-transfer';
+import { Media, MediaObject } from '@ionic-native/media';
+import { MediaCapture, MediaFile, CaptureError, CaptureVideoOptions } from '@ionic-native/media-capture';
+
+import { RecordPage } from '../record/record';
 
 @Component({
   selector: 'page-home',
@@ -19,7 +23,9 @@ export class HomePage {
               public broadcaster : Broadcaster,
               public camera: Camera,
               public device: Device,
+              public file: File,
               public transfer: FileTransfer,
+              public media: Media,
               public mediaCapture: MediaCapture) {
 
   }
@@ -31,8 +37,8 @@ export class HomePage {
       } else if (e.data == "getPicValue") {
         this.takePhoto();
       } else if (e.data == "takeVideo") {
-        // this.captureVideo();
-        this.captureAudio();
+        this.captureVideo();
+        // this.captureAudio();
       } else if (e.data == "getewmvalue") {
         this.barcodeScannerScan ();
       } else if (e.data.indexOf("getVideo|") > -1) {
@@ -76,19 +82,24 @@ export class HomePage {
   }
   
   captureAudio(){
-    let options: CaptureAudioOptions = { limit: 1 };
-    this.mediaCapture.captureAudio(options)
-    .then(
-      (dataArray: MediaFile[]) => {
-        var mediaFile = dataArray[0];
-        // alert(JSON.stringify(data));
-        this.uploadMediaFile(mediaFile);
-      },
-      (err: CaptureError) => {
-        alert("录音失败!");
-        // alert("CaptureError:" + err);
-      }
-    );
+    alert("record");
+    this.navCtrl.push(RecordPage);
+    // let path = this.file.externalApplicationStorageDirectory + 'file.aac';
+    // alert(path)
+    // const file: MediaObject = this.media.create(path);
+    // file.startRecord();
+    // window.setTimeout(() => file.stopRecord(), 10000);
+
+    // let path = this.file.externalApplicationStorageDirectory;
+    // let filename = 'my_file.aac';
+    // this.file.createFile(path, filename, true)
+    // .then(() => {
+    //   let finalPath = path.replace(/^file:\/\//, '') + 'my_file.aac';
+    //   alert(finalPath);
+    //   let file = this.media.create(path);
+    //   file.startRecord();
+    //   window.setTimeout(() => file.stopRecord(), 10000);
+    // });
   }
 
   captureVideo(){
@@ -108,6 +119,7 @@ export class HomePage {
   }
 
   uploadMediaFile(data : MediaFile) {
+    
     let options: FileUploadOptions = {
       fileKey: 'file',
       fileName: 'video.mp4',
@@ -119,7 +131,9 @@ export class HomePage {
     let ipAddress = srcAddress.split("/")[2];
 
     const fileTransfer: FileTransferObject = this.transfer.create();
-    let url = encodeURI("http://" + ipAddress + "/mobile/mobile.ashx?type=UploadFile");
+    let url = encodeURI('http://' + ipAddress + '/mobile/mobile.ashx?type=UploadFile');
+    alert(url);
+
     fileTransfer.upload(data.fullPath, url, options)
     .then((data : FileUploadResult) => {
       
@@ -127,10 +141,8 @@ export class HomePage {
       var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
       iWindow.postMessage("takeVideo:" + data.response, "*");
       // success
-    }, (err) => {
+    }, (err : FileTransferError) => {
       alert("上传媒体文件失败!");
-      // alert("uploadError:" + err);
-      // error
     })
   }
 

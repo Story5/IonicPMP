@@ -8,18 +8,22 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
+import { File } from '@ionic-native/file';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { Keyboard } from '@ionic-native/keyboard';
+import { Media } from '@ionic-native/media';
 import { MediaCapture } from '@ionic-native/media-capture';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { RecordPage } from '../pages/record/record';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    RecordPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,8 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    RecordPage
   ],
   providers: [
     StatusBar,
@@ -38,8 +43,10 @@ import { HomePage } from '../pages/home/home';
     Broadcaster,
     Camera,
     Device,
+    File,
     FileTransfer,
     Keyboard,
+    Media,
     MediaCapture,
     ScreenOrientation
   ]
