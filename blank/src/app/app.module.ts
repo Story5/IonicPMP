@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
@@ -39,6 +40,7 @@ import { RecordPage } from '../pages/record/record';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AndroidPermissions,
     BarcodeScanner,
     Broadcaster,
     Camera,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
@@ -19,6 +20,7 @@ import { RecordPage } from '../record/record';
 export class HomePage {
 
   constructor(public navCtrl: NavController,
+              public androidPermissions: AndroidPermissions,
               public barcodeScanner: BarcodeScanner,
               public broadcaster : Broadcaster,
               public camera: Camera,
@@ -103,19 +105,27 @@ export class HomePage {
   }
 
   captureVideo(){
-    let options: CaptureVideoOptions = { limit: 1 };
-    this.mediaCapture.captureVideo(options)
-    .then(
-      (dataArray: MediaFile[]) => {
-        var mediaFile = dataArray[0];
-        // alert(JSON.stringify(data));
-        this.uploadMediaFile(mediaFile);
-      },
-      (err: CaptureError) => {
-        alert("录制视频失败!");
-        // alert("CaptureError:" + err);
-      }
-    );
+
+    this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.WRITE_EXTERNAL_STORAGE)
+    .then(success => {
+      
+      let options: CaptureVideoOptions = { limit: 1 };
+      this.mediaCapture.captureVideo(options)
+      .then(
+        (dataArray: MediaFile[]) => {
+          var mediaFile = dataArray[0];
+          // alert(JSON.stringify(data));
+          this.uploadMediaFile(mediaFile);
+        },
+        (err: CaptureError) => {
+          alert("录制视频失败!");
+          // alert("CaptureError:" + err);
+        }
+      );
+
+    },err => {
+      alert("需要存储权限才能录制视频");
+    });
   }
 
   uploadMediaFile(data : MediaFile) {
