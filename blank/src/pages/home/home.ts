@@ -142,7 +142,6 @@ export class HomePage {
 
     const fileTransfer: FileTransferObject = this.transfer.create();
     let url = encodeURI('http://' + ipAddress + '/mobile/mobile.ashx?type=UploadFile');
-    alert(url);
 
     fileTransfer.upload(data.fullPath, url, options)
     .then((data : FileUploadResult) => {
