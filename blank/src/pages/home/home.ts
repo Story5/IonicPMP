@@ -115,7 +115,7 @@ export class HomePage {
         (dataArray: MediaFile[]) => {
           var mediaFile = dataArray[0];
           // alert(JSON.stringify(data));
-          this.uploadMediaFile(mediaFile);
+          this.uploadMediaFile(mediaFile.fullPath);
         },
         (err: CaptureError) => {
           alert("录制视频失败!");
@@ -128,7 +128,7 @@ export class HomePage {
     });
   }
 
-  uploadMediaFile(data : MediaFile) {
+  uploadMediaFile(fileUrl : string) {
     
     let options: FileUploadOptions = {
       fileKey: 'file',
@@ -143,7 +143,7 @@ export class HomePage {
     const fileTransfer: FileTransferObject = this.transfer.create();
     let url = encodeURI('http://' + ipAddress + '/mobile/mobile.ashx?type=UploadFile');
 
-    fileTransfer.upload(data.fullPath, url, options)
+    fileTransfer.upload(fileUrl, url, options)
     .then((data : FileUploadResult) => {
       
       
@@ -172,13 +172,22 @@ export class HomePage {
   }
 
   fireRecordAudio() {
-    this.broadcaster.addEventListener("uploadRecord").subscribe((event) => {
-      alert("uploadRecord");
-    });
+    if (this.device.platform == "iOS") {
 
-    this.broadcaster.fireNativeEvent('recordAudio',{param:"message"}).then(() => {
-      console.log('success');
-    });
+      this.broadcaster.addEventListener("uploadRecord").subscribe((event) => {
+        let path = event.recordPath;
+        this.uploadMediaFile(path);
+        alert(path);
+      });
+
+      this.broadcaster.fireNativeEvent('recordAudio',{param:"message"}).then(() => {
+        console.log('success');
+      });
+
+    } else {
+      this.navCtrl.push(RecordPage);
+    }
+    
   }
 
   fireVideoSurveillance(message? : string) {
