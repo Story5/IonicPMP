@@ -39,13 +39,13 @@ export class HomePage {
       } else if (e.data == "getPicValue") {
         this.takePhoto();
       } else if (e.data == "takeVideo") {
-        this.captureVideo();
-        // this.captureAudio();
+        // this.captureVideo();
+        this.fireRecordAudio();
       } else if (e.data == "getewmvalue") {
         this.barcodeScannerScan ();
       } else if (e.data.indexOf("getVideo|") > -1) {
         let message = e.data.split("|")[3];
-        this.pushAndroidActivity(message);
+        this.fireVideoSurveillance(message);
       } else if (e.data.indexOf("set_jPushAlias") > -1) {
         let alias = e.data.split('|')[1]
         this.set_jPushAlias(alias);
@@ -171,7 +171,17 @@ export class HomePage {
     iWindow.postMessage("getewmvalue:" + text, "*");
   }
 
-  pushAndroidActivity(message? : string) {
+  fireRecordAudio() {
+    this.broadcaster.addEventListener("uploadRecord").subscribe((event) => {
+      alert("uploadRecord");
+    });
+
+    this.broadcaster.fireNativeEvent('recordAudio',{param:"message"}).then(() => {
+      console.log('success');
+    });
+  }
+
+  fireVideoSurveillance(message? : string) {
     // Send event to Native
     this.broadcaster.fireNativeEvent('openDevice', { param : message }).then(() => { 
       console.log('success');
