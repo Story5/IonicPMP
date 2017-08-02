@@ -12,7 +12,7 @@ import { RecordPage } from '../pages/record/record';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = RecordPage;
+  rootPage:any = HomePage;
 
   constructor(public platform: Platform, 
               statusBar: StatusBar, 

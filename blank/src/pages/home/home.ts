@@ -39,7 +39,8 @@ export class HomePage {
       } else if (e.data == "getPicValue") {
         this.takePhoto();
       } else if (e.data == "takeVideo") {
-        // this.captureVideo();
+        this.captureVideo();
+      } else if (e.data == "recordAudio") {
         this.fireRecordAudio();
       } else if (e.data == "getewmvalue") {
         this.barcodeScannerScan ();
@@ -115,7 +116,7 @@ export class HomePage {
         (dataArray: MediaFile[]) => {
           var mediaFile = dataArray[0];
           // alert(JSON.stringify(data));
-          this.uploadMediaFile(mediaFile.fullPath);
+          this.uploadMediaFile(mediaFile.fullPath,"takeVideo:");
         },
         (err: CaptureError) => {
           alert("录制视频失败!");
@@ -128,7 +129,7 @@ export class HomePage {
     });
   }
 
-  uploadMediaFile(fileUrl : string) {
+  uploadMediaFile(fileUrl : string,message:string) {
     
     let options: FileUploadOptions = {
       fileKey: 'file',
@@ -148,7 +149,7 @@ export class HomePage {
       
       
       var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
-      iWindow.postMessage("takeVideo:" + data.response, "*");
+      iWindow.postMessage(message + data.response, "*");
       // success
     }, (err : FileTransferError) => {
       alert("上传媒体文件失败!");
@@ -176,7 +177,7 @@ export class HomePage {
 
       this.broadcaster.addEventListener("uploadRecord").subscribe((event) => {
         let path = event.recordPath;
-        this.uploadMediaFile(path);
+        this.uploadMediaFile(path,"recordAudio:");
         alert(path);
       });
 
