@@ -116,7 +116,7 @@ export class HomePage {
         (dataArray: MediaFile[]) => {
           var mediaFile = dataArray[0];
           // alert(JSON.stringify(data));
-          this.uploadMediaFile(mediaFile.fullPath,"takeVideo:");
+          this.uploadMediaFile(mediaFile.fullPath,"mp4","takeVideo:");
         },
         (err: CaptureError) => {
           alert("录制视频失败!");
@@ -129,11 +129,11 @@ export class HomePage {
     });
   }
 
-  uploadMediaFile(fileUrl : string,message:string) {
-    
+  uploadMediaFile(fileUrl : string,fileType:string,message:string) {
+    alert(fileUrl);
     let options: FileUploadOptions = {
       fileKey: 'file',
-      fileName: 'video.mp4',
+      fileName: 'file.' + fileType,
       headers: {}
     }
 
@@ -177,7 +177,7 @@ export class HomePage {
 
       this.broadcaster.addEventListener("uploadRecord").subscribe((event) => {
         let path = event.recordPath;
-        this.uploadMediaFile(path,"recordAudio:");
+        this.uploadMediaFile(path,"mp3","recordAudio:");
         alert(path);
       });
 
