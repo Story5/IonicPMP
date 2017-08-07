@@ -7,7 +7,7 @@ import { Keyboard } from '@ionic-native/keyboard';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 import { HomePage } from '../pages/home/home';
-import { RecordPage } from '../pages/record/record';
+
 @Component({
   templateUrl: 'app.html'
 })

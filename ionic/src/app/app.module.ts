@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { QRScanner } from '@ionic-native/qr-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
@@ -18,13 +18,13 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { RecordPage } from '../pages/record/record';
+import { QRScannerPage } from '../pages/qrscanner/qrscanner';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RecordPage
+    QRScannerPage
   ],
   imports: [
     BrowserModule,
@@ -34,14 +34,14 @@ import { RecordPage } from '../pages/record/record';
   entryComponents: [
     MyApp,
     HomePage,
-    RecordPage
+    QRScannerPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AndroidPermissions,
-    BarcodeScanner,
+    QRScanner,
     Broadcaster,
     Camera,
     Device,

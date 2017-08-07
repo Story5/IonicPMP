@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions';
-import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
@@ -11,7 +10,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject, FileUploadResult, 
 import { Media, MediaObject } from '@ionic-native/media';
 import { MediaCapture, MediaFile, CaptureError, CaptureVideoOptions } from '@ionic-native/media-capture';
 
-import { RecordPage } from '../record/record';
+import { QRScannerPage } from '../qrscanner/qrscanner';
 
 @Component({
   selector: 'page-home',
@@ -26,7 +25,6 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
               public androidPermissions: AndroidPermissions,
-              public barcodeScanner: BarcodeScanner,
               public broadcaster : Broadcaster,
               public camera: Camera,
               public device: Device,
@@ -50,7 +48,7 @@ export class HomePage {
       } else if (e.data == "recordAudio") {
         this.fireRecordAudio();
       } else if (e.data == "getewmvalue") {
-        this.barcodeScannerScan ();
+        this.navCtrl.push(QRScannerPage);
       } else if (e.data.indexOf("getVideo|") > -1) {
         let message = e.data.split("|")[3];
         this.fireVideoSurveillance(message);
@@ -101,27 +99,6 @@ export class HomePage {
     }, (err) => {
       // Handl
     });
-  }
-  
-  captureAudio(){
-    alert("record");
-    this.navCtrl.push(RecordPage);
-    // let path = this.file.externalApplicationStorageDirectory + 'file.aac';
-    // alert(path)
-    // const file: MediaObject = this.media.create(path);
-    // file.startRecord();
-    // window.setTimeout(() => file.stopRecord(), 10000);
-
-    // let path = this.file.externalApplicationStorageDirectory;
-    // let filename = 'my_file.aac';
-    // this.file.createFile(path, filename, true)
-    // .then(() => {
-    //   let finalPath = path.replace(/^file:\/\//, '') + 'my_file.aac';
-    //   alert(finalPath);
-    //   let file = this.media.create(path);
-    //   file.startRecord();
-    //   window.setTimeout(() => file.stopRecord(), 10000);
-    // });
   }
 
   captureVideo(){
@@ -174,25 +151,7 @@ export class HomePage {
     })
   }
 
-  barcodeScannerScan() {
-    this.barcodeScanner.scan().then((barcodeData : BarcodeScanResult) => {
-      // Success! Barcode data is here
-      this.postQRString(barcodeData.text);
-    }, (err) => {
-        // An error occurred
-        alert("扫描二维码失败!");
-    });
-  }
-
-  postQRString(text : string) {
-    let iframe = document.getElementById("mainframe");
-    var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
-    iWindow.postMessage("getewmvalue:" + text, "*");
-  }
-
   fireRecordAudio() {
-    if (this.device.platform == "iOS") {
-
       this.broadcaster.addEventListener("uploadRecord").subscribe((event) => {
         let path = event.recordPath;
         this.uploadMediaFile(path,"mp3","uploadRecord:");
@@ -202,11 +161,6 @@ export class HomePage {
       this.broadcaster.fireNativeEvent('recordAudio',{param:"message"}).then(() => {
         console.log('success');
       });
-
-    } else {
-      this.navCtrl.push(RecordPage);
-    }
-    
   }
 
   fireVideoSurveillance(message? : string) {
