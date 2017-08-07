@@ -19,6 +19,11 @@ import { RecordPage } from '../record/record';
 })
 export class HomePage {
 
+  recordPath : string = this.file.externalApplicationStorageDirectory + 'file.mp3';
+  mediaObject : MediaObject = this.media.create(this.recordPath);
+
+
+
   constructor(public navCtrl: NavController,
               public androidPermissions: AndroidPermissions,
               public barcodeScanner: BarcodeScanner,
@@ -29,6 +34,8 @@ export class HomePage {
               public transfer: FileTransfer,
               public media: Media,
               public mediaCapture: MediaCapture) {
+
+
 
   }
 
@@ -53,7 +60,19 @@ export class HomePage {
       } else if (e.data.indexOf("set_jPushTags") > -1) {
         let tags = e.data.split('|')[1];
         this.set_jPushTags(tags); 
-      } 
+      } else if (e.data == 'startRecord') {
+        this.mediaObject.startRecord();
+      } else if (e.data == 'stopRecord') {
+        this.mediaObject.stopRecord();
+      } else if (e.data == 'playRecord') {
+        this.mediaObject.play();
+      } else if (e.data == 'pauseRecord') {
+        this.mediaObject.pause();
+      } else if (e.data == 'reRecord') {
+        this.mediaObject.startRecord();
+      } else if (e.data == 'uploadRecord') {
+        this.uploadMediaFile(this.recordPath,"mp3","uploadRecord:");
+      }
     }, false);
   }
 
@@ -130,7 +149,6 @@ export class HomePage {
   }
 
   uploadMediaFile(fileUrl : string,fileType:string,message:string) {
-    alert(fileUrl);
     let options: FileUploadOptions = {
       fileKey: 'file',
       fileName: 'file.' + fileType,
@@ -177,7 +195,7 @@ export class HomePage {
 
       this.broadcaster.addEventListener("uploadRecord").subscribe((event) => {
         let path = event.recordPath;
-        this.uploadMediaFile(path,"mp3","recordAudio:");
+        this.uploadMediaFile(path,"mp3","uploadRecord:");
         alert(path);
       });
 
