@@ -29,7 +29,7 @@ export class MyApp {
       screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT_PRIMARY);
 
       // app版本更新
-      this.postAppVersion(1.1);
+      this.postAppVersion(1.2);
 
       // 注册返回键
       this.registerBackButtonAction();
@@ -43,6 +43,8 @@ export class MyApp {
     window.addEventListener("message", (e) => {
       if (e.data == "setBack") {
         this.platform.exitApp();
+      } else {
+        
       }
     }, false);
   }
