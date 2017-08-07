@@ -76,7 +76,7 @@ export class HomePage {
 
   startRecord () {
     let date = new Date();
-    let recordFileName = date.getFullYear()*10000000000 + date.getMonth()*100000000 + date.getDate()*1000000 + date.getHours()*10000 + date.getMinutes()*100 + date.getSeconds(); 
+    let recordFileName = String(date.getFullYear()*10000000000 + date.getMonth()*100000000 + date.getDate()*1000000 + date.getHours()*10000 + date.getMinutes()*100 + date.getSeconds()); 
     this.recordPath = this.file.externalApplicationStorageDirectory + recordFileName + '.mp3';
     this.mediaObject = this.media.create(this.recordPath);
     this.mediaObject.startRecord();
