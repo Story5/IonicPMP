@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
@@ -25,6 +26,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
               public androidPermissions: AndroidPermissions,
+              public barcodeScanner: BarcodeScanner,
               public broadcaster : Broadcaster,
               public camera: Camera,
               public device: Device,
@@ -34,7 +36,7 @@ export class HomePage {
               public mediaCapture: MediaCapture) {
 
 
-
+              androidPermissions.requestPermission(this.androidPermissions.PERMISSION.RECORD_AUDIO);
   }
 
   ngOnInit() {
@@ -48,7 +50,11 @@ export class HomePage {
       } else if (e.data == "recordAudio") {
         this.fireRecordAudio();
       } else if (e.data == "getewmvalue") {
-        this.navCtrl.push(QRScannerPage);
+        if (this.device.platform == 'iOS') {
+          this.barcodeScannerScan ();
+        } else {
+          this.navCtrl.push(QRScannerPage);
+        }
       } else if (e.data.indexOf("getVideo|") > -1) {
         let message = e.data.split("|")[3];
         this.fireVideoSurveillance(message);
@@ -72,6 +78,22 @@ export class HomePage {
         this.uploadMediaFile(this.recordPath,"mp3","uploadRecord:");
       }
     }, false);
+  }
+
+  barcodeScannerScan() {
+    this.barcodeScanner.scan().then((barcodeData : BarcodeScanResult) => {
+      // Success! Barcode data is here
+      this.postQRString(barcodeData.text);
+    }, (err) => {
+        // An error occurred
+        alert("扫描二维码失败!");
+    });
+  }
+
+  postQRString(text : string) {
+    let iframe = document.getElementById("mainframe");
+    var iWindow = (<HTMLIFrameElement> iframe).contentWindow;
+    iWindow.postMessage("getewmvalue:" + text, "*");
   }
 
   startRecord () {
@@ -163,7 +185,6 @@ export class HomePage {
       this.broadcaster.addEventListener("uploadRecord").subscribe((event) => {
         let path = event.recordPath;
         this.uploadMediaFile(path,"mp3","uploadRecord:");
-        alert(path);
       });
 
       this.broadcaster.fireNativeEvent('recordAudio',{param:"message"}).then(() => {

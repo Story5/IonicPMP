@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { QRScanner } from '@ionic-native/qr-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
 import { Device } from '@ionic-native/device';
@@ -42,6 +43,7 @@ import { QRScannerPage } from '../pages/qrscanner/qrscanner';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AndroidPermissions,
     QRScanner,
+    BarcodeScanner,
     Broadcaster,
     Camera,
     Device,
