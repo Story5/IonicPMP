@@ -29,7 +29,7 @@ export class MyApp {
       screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT_PRIMARY);
 
       // app版本更新
-      this.postAppVersion(1.2);
+      this.postAppVersion(1.3);
 
       // 注册返回键
       this.registerBackButtonAction();

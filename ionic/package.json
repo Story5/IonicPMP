@@ -58,6 +58,7 @@
         "ionic-angular": "3.5.3",
         "ionic-plugin-keyboard": "^2.2.1",
         "ionicons": "3.0.0",
+        "phonegap-plugin-barcodescanner": "^6.0.8",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
         "zone.js": "0.8.12"
@@ -88,7 +89,10 @@
             },
             "cordova-plugin-file": {},
             "cordova-plugin-android-permissions": {},
-            "cordova-plugin-qrscanner": {}
+            "cordova-plugin-qrscanner": {},
+            "phonegap-plugin-barcodescanner": {
+                "CAMERA_USAGE_DESCRIPTION": " "
+            }
         },
         "platforms": [
             "android",
