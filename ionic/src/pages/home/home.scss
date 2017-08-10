@@ -2,7 +2,15 @@ page-home {
 
 }
 
+ion-content {
+    background: none transparent;
+}
+
 iframe {
-    background-color: white;
+    background: none transparent;
     -webkit-user-select: auto;
+    position: absolute; 
+    min-width: 100%; 
+    min-height: 100%; 
+    z-index: 99;
 }
