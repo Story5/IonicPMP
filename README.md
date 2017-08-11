@@ -57,3 +57,11 @@ $ npm install -g ios-sim
 ### 3.2 mix ionic and android native
 * https://blog.nami.idv.tw/?p=598
 * http://blog.csdn.net/Story51314/article/details/73290212
+
+# 4.Angular2组件
+|功能|用法|
+|---|---|
+|插值|{{variable}}|
+|属性绑定|[value]|
+|事件绑定|(keyup)|
+|双向绑定|[(ngModel)]|
