@@ -5,6 +5,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Clipboard } from '@ionic-native/clipboard';
 import { Device } from '@ionic-native/device';
 import { File } from '@ionic-native/file';
 import { FileTransfer, FileUploadOptions, FileTransferObject, FileUploadResult, FileTransferError } from '@ionic-native/file-transfer';
@@ -22,13 +23,12 @@ export class HomePage {
   recordPath : string;
   mediaObject : MediaObject;
 
-
-
   constructor(public navCtrl: NavController,
               public androidPermissions: AndroidPermissions,
               public barcodeScanner: BarcodeScanner,
               public broadcaster : Broadcaster,
               public camera: Camera,
+              public clipboard: Clipboard,
               public device: Device,
               public file: File,
               public transfer: FileTransfer,

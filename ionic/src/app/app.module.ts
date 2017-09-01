@@ -9,6 +9,7 @@ import { QRScanner } from '@ionic-native/qr-scanner';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Broadcaster } from '@ionic-native/broadcaster';
 import { Camera } from '@ionic-native/camera';
+import { Clipboard } from '@ionic-native/clipboard';
 import { Device } from '@ionic-native/device';
 import { File } from '@ionic-native/file';
 import { FileTransfer } from '@ionic-native/file-transfer';
@@ -46,6 +47,7 @@ import { QRScannerPage } from '../pages/qrscanner/qrscanner';
     BarcodeScanner,
     Broadcaster,
     Camera,
+    Clipboard,
     Device,
     File,
     FileTransfer,
