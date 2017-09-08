@@ -1,4 +1,4 @@
-# 优达学城
+Â# 优达学城
 
 <table>
   <caption>优达学城<caption>
@@ -14,10 +14,42 @@
   <tr>
     <td>1</td>
     <td>编程入门</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>编程入门</td>
+    <td>成为具备编程能力的新人类</td>
+    <td>facebook/mongoDB</td>
+    <td>2017年4月27日</td>
+    <td>¥2699(花呗分期 ￥ 243 x 12 期)</td>
   <tr>
+  <tr>
+    <td rowspan="2">2</td>
+    <td rowspan="2">iOS工程师</td>
+    <td>iOS 应用开发入门（中/英）</td>
+    <td>开发你的第一个 iOS 应用</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>iOS 开发者（英文）</td>
+    <td>开发 iPhone 和 iPad 上的成功应用</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">3</td>
+    <td rowspan="2">Android开发工程师</td>
+    <td>Android 开发（入门）</td>
+    <td>迈出成为 Android 开发者的第一步</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Android 开发（进阶）</td>
+    <td>成为卓越的 Android 开发工程师</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
