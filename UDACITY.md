@@ -52,4 +52,20 @@
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td rowspan="2">4</td>
+    <td rowspan="2">前端开发工程师</td>
+    <td>前端开发（入门）</td>
+    <td>迈出成为前端工程师的第一步</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>前端开发（进阶）</td>
+    <td>创造让人惊艳的前端用户体验</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
