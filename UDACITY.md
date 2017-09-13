@@ -1,4 +1,4 @@
-Â# 优达学城
+# 优达学城
 
 <table>
   <caption>优达学城<caption>
@@ -73,6 +73,16 @@
     <td>全栈网站开发工程师</td>
     <td>全栈网站开发工程师（英文）</td>
     <td>构建更高级的复杂网站应用Â</td>
+    <td></td>
+    <td></td>
+    <td>
+    </td>
+  <tr>
+  <tr>
+    <td>6</td>
+    <td>VR</td>
+    <td>VR 开发者（英文）</td>
+    <td>加入这场创意变革！</td>
     <td></td>
     <td></td>
     <td>
