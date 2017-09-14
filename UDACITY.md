@@ -88,4 +88,20 @@
     <td>
     </td>
   <tr>
+  <tr>
+    <td rowspan="2">7</td>
+    <td rowspan="2">数据分析师</td>
+    <td>数据分析（入门）</td>
+    <td>打下扎实基础，掌握数据分析的基础方法</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>数据分析（进阶）</td>
+    <td>掌握数据分析的最佳实践，迈出职业第一步</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
