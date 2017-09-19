@@ -124,4 +124,27 @@
     <td>
     </td>
   <tr>
+  <tr>
+    <td rowspan="3">10</td>
+    <td rowspan="3">机器学习工程师</td>
+    <td>机器学习（入门）</td>
+    <td>掌握 Python、微积分、线性代数和统计基础知识</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>机器学习（进阶）</td>
+    <td>成为人工智能、数据分析领域的稀缺人才</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>深度学习(中/英)</td>
+    <td>与 Siraj Raval 一起学深度学习</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
