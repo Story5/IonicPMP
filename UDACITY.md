@@ -147,4 +147,14 @@
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td>11</td>
+    <td>人工智能</td>
+    <td>人工智能工程师（英文）</td>
+    <td>让不可能成为可能</td>
+    <td></td>
+    <td></td>
+    <td>
+    </td>
+  <tr>
 </table>
