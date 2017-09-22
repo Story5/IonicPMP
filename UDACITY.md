@@ -157,4 +157,14 @@
     <td>
     </td>
   <tr>
+  <tr>
+    <td>12</td>
+    <td>理解人类</td>
+    <td>理解人类</td>
+    <td>由机器人策划,为机器人开设</td>
+    <td></td>
+    <td></td>
+    <td>
+    </td>
+  <tr>
 </table>
