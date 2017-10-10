@@ -31,8 +31,10 @@
 
 :three: 填入以下必要的一些信息
 
-| 项目 | 节点 | 说明 |
+| 节点 | 字段 | 说明 |
 |---|---|---|
-|App ID Description|Name|
+|`App ID Description`|`Name`|AppID的名称,仅支持英文|
+|`APP ID Suffix`|选择`Explicit App ID`|这里的`Bundle ID`要和`Xcode`里的一致.以域名反写形式填入,例如`com.blueearth.sgcoc`|
+|`App Services`|`Push Notifications`|如果应用有推送功能,一般需要勾选该功能|
 
 ![Account](06.png)
