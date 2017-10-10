@@ -39,4 +39,4 @@
 
 ![Account](06.png)
 
-:four: 所有信息填写完成之后,点击页面下方`continue`按钮.到此为止,我们的`App ID`已经配置成功.
+:four: 所有信息填写完成之后,点击页面下方`continue`按钮进入到下一级页面点击`register`并继续点击`Done`.到此为止,我们的`App ID`已经配置成功.
