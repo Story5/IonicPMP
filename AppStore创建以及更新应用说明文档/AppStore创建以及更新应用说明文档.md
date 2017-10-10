@@ -2,7 +2,7 @@
 
 ## 1.配置AppID
 
-## 1.1 登录[苹果开发者中心](https://developer.apple.com/cn/)
+### 1.1 登录[苹果开发者中心](https://developer.apple.com/cn/)
 
 :one: 在浏览器中输入https://developer.apple.com/cn/ 打开苹果开发者中心页面
 
@@ -20,7 +20,7 @@
 
 :four: 点击`Certificates,Identifiers & Profiles`进入证书配置界面.
 
-## 1.2 配置AppID
+### 1.2 配置AppID
 :one: 点击左侧`Identifiers`下的`App IDs`
 
 ![App IDs](04.png)
@@ -38,3 +38,5 @@
 |`App Services`|`Push Notifications`|如果应用有推送功能,一般需要勾选该功能|
 
 ![Account](06.png)
+
+:four: 所有信息填写完成之后,点击页面下方`continue`按钮.到此为止,我们的`App ID`已经配置成功.
