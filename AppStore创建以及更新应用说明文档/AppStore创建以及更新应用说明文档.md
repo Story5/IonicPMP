@@ -43,6 +43,7 @@
 
 ## 2.在`iTunes Connect`中新建应用
 
+### 2.1 进入开发者app管理页面
 :one: 我们可以直接在浏览器中输入 https://itunesconnect.apple.com/login 进入到`iTunes Connect`登录界面
 
 ![iTunes Connect Login](07.png)
@@ -52,3 +53,23 @@
 ![iTunes Connect App](08.png)
 
 :three:点击`我的App`进入开发者app管理页面
+
+### 2.2 新建App Store应用
+:one: 点击左上角`+`号
+
+![iTunes Connect plus](09.png)
+
+:two: 在弹出的窗口中选择`新建App`进入配置页面
+
+![iTunes Connect new App](10.png)
+
+:three: 配置App所需项.
+* 平台选择`iOS`
+* 名称填入应用名称,该名称即`App Store`应用展示以及搜索名称
+* 主要语言可以不选
+* 套装ID这里我们选择前面创建的AppID
+* SKU为App专有的ID,此ID不会在`App Store`中显示。以应用名称英文缩写即可.
+
+![iTunes Connect configure](11.png)
+
+以上所有填写成功后,创建按钮会变亮,点击`创建`完成应用的创建.
