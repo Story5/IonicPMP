@@ -40,3 +40,15 @@
 ![Account](06.png)
 
 :four: 所有信息填写完成之后,点击页面下方`continue`按钮进入到下一级页面点击`register`并继续点击`Done`.到此为止,我们的`App ID`已经配置成功.
+
+## 2.在`iTunes Connect`中新建应用
+
+:one: 我们可以直接在浏览器中输入 https://itunesconnect.apple.com/login 进入到`iTunes Connect`登录界面
+
+![iTunes Connect Login](07.png)
+
+:two: 输入我们的苹果开发者账号,并敲击`Enter`键进行登录,进入开发者主页
+
+![iTunes Connect App](08.png)
+
+:three:点击`我的App`进入开发者app管理页面
