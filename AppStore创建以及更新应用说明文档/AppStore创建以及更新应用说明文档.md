@@ -14,7 +14,7 @@
 
 :three: 输入苹果开发者账号密码并点击`Sign In`登录,进入Account界面.
 
-如果没有苹果开发者账号,点击`Create Apple ID`进行申请.这里不错阐述,自行查阅文档.
+如果没有苹果开发者账号,点击`Create Apple ID`进行申请.这里不作阐述,自行查阅文档.
 
 ![Account](03.png)
 
@@ -73,3 +73,5 @@
 ![iTunes Connect configure](11.png)
 
 以上所有填写成功后,创建按钮会变亮,点击`创建`完成应用的创建.
+
+## 3.
