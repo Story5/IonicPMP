@@ -6,4 +6,5 @@
 
 # 软件推荐
 
+## 1.图片处理
 * 网页长截屏 - [Paparazzi!](https://derailer.org/paparazzi/)
