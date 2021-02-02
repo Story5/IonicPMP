@@ -54,9 +54,17 @@
 * 在传输数据阶段依然使用**对称加密**，但是对称加密的密钥我们采用**非对称加密来传输**
 * 向CA机构申请**数字证书**(一是验证服务器身份,二是包含服务器公钥)
 
+## 4.内存划分
+
+![内存划分](https://img-blog.csdn.net/20160512152821802)
+
 # 二、iOS层面
 
-## 1.Objective-C优缺点
+## 1.UIKit结构
+
+![UIKit结构](https://mmbiz.qpic.cn/mmbiz_jpg/foPACGrddJ0YQLeK0eqUxEyJCWJWQVt4JpnZzHHNdWfJLW0S44N27bnyibVrU0jecxDlc35vgTYTVtPGvsFicjJQ/640.jpeg?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+## 2.Objective-C优缺点
 
 ### (1)优点
 
@@ -73,29 +81,42 @@
 * 不支持多重继承 
 * 使用动态运行时类型，所有的方法都是函数调用，所以很多编译时优化方法都用不到。（如内联函数等），性能低劣。 
 
-## 2.属性关键字assign、retain、weak、copy
+## 3.属性关键字assign、retain、weak、copy
 
 - assign：用于基本数据类型和结构体。如果修饰对象的话，当销毁时，属性值不会自动置nil，可能造成野指针。
 - weak：对象引用计数为0时，属性值也会自动置nil
 - retain：强引用类型，ARC下相当于strong，但block不能用retain修饰，因为等同于assign不安全。
 - strong：强引用类型，修饰block时相当于copy。
 
-## 3.weak属性如何自动置nil的？
+## 4.weak属性如何自动置nil的？
 
 Runtime会对weak属性进行内存布局，构建hash表：以weak属性对象内存地址为key，weak属性值(weak自身地址)为value。当对象引用计数为0 dealloc时，会将weak属性值自动置nil。
 
-## 4.KVO底层实现原理？手动触发KVO？swift如何实现KVO？
+## 5.block和函数指针的理解
+
+### (1)相似点
+
+都可以实现回调的操作
+
+### (2)不同点
+
+* **函数指针**只能指向预先定义好的函数代码块,在编译链接阶段就已经确定好的
+* **Block**本质是OC对象,是NSObject的子类,可以接受消息
+* 函数里面只能访问全局变量,而Block代码块不光能访问全局变量,还拥有当前栈内存和堆内存变量的可读性,通过__block修饰的局部变量还可以在block代码块里进行修改
+* 从内存角度看,函数指针只是指向代码区的一段可执行代码,而block实际上是程序运行过程中在栈内存动态创建的对象,可以向其发从copy消息来将其拷贝到堆内存,以延长生命周期
+
+## 6.KVO底层实现原理？手动触发KVO？swift如何实现KVO？
 
 - KVO原理：当观察一个对象时，runtime会动态创建继承自该对象的类，并重写被观察对象的setter方法，重写的setter方法会负责在调用原setter方法前后通知所有观察对象值得更改，最后会把该对象的isa指针指向这个创建的子类，对象就变成子类的实例。
 - 如何手动触发KVO：在setter方法里，手动实现NSObject两个方法：willChangeValueForKey、didChangeValueForKey
 - swift的kvo：继承自NSObject的类，或者直接willset/didset实现。
 
-## 5.OC与Swift混编
+## 7.OC与Swift混编
 
 - OC调用swift：import "工程名-swift.h” @objc
 - swift调用oc：桥接文件
 
-## 5.并发编程
+## 8.并发编程
 
 **一个进程(App)至少包含一个线程(UI主线程,网络其他线程)**
 
@@ -125,7 +146,7 @@ Runtime会对weak属性进行内存布局，构建hash表：以weak属性对象�
 
 可以阻止两个线程同时更新一个值，正在修改属性的线程必须处理完毕后，其他线程才能开始处理。
 
-## 6.runtime
+## 9.runtime
 
 ### (1)OC 的消息机制
 
@@ -174,16 +195,127 @@ Objective-C是动态语言，每个方法在运行时会被动态转为消息发
 
 **指向他的类对象,从而可以找到对象上的方法**
 
-## 7.UITableView优化方法
+## 10.NSTimer准吗?
 
-* 缓存高度
+### (1)不准
 
-## 8.category同名方法调用
+### (2)原因
+
+* NSTimer加在main runloop中，模式是NSDefaultRunLoopMode，main负责所有主线程事件，例如UI界面的操作，复杂的运算，这样在同一个runloop中timer就会产生阻塞。
+
+* 模式的改变。主线程的 RunLoop 里有两个预置的 Mode：kCFRunLoopDefaultMode 和 UITrackingRunLoopMode。
+
+* 当你创建一个 Timer 并加到 DefaultMode 时，Timer 会得到重复回调，但此时滑动一个ScrollView时，RunLoop 会将 mode 切换为 TrackingRunLoopMode，这时 Timer 就不会被回调，并且也不会影响到滑动操作。所以就会影响到NSTimer不准的情况。
+
+> DefaultMode 是 App 平时所处的状态，rackingRunLoopMode 是追踪 ScrollView 滑动时的状态。
+
+### (3)解决
+
+* 在主线程中进行NSTimer操作，但是将NSTimer实例加到main runloop的特定mode（模式）中。避免被复杂运算操作或者UI界面刷新所干扰。
+
+  ```objective-c
+  self.timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(showTime) userInfo:nil repeats:YES];
+  [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+  ```
+
+* 在子线程中进行NSTimer的操作，再在主线程中修改UI界面显示操作结果
+
+  ```objective-c
+  - (void)timerMethod2 {
+  	NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(newThread) object:nil];
+  	[thread start];
+  }
+  
+  
+  - (void)newThread{
+  	@autoreleasepool{
+  	[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(showTime) userInfo:nil repeats:YES];
+  	[[NSRunLoop currentRunLoop] run];
+  	}
+  }
+  ```
+
+* 直接用`gcd`
+
+## 11.UITableView优化方法
+
+### (1)cell复用机制
+
+### (2)避免cell重新布局
+
+* cell的布局填充等操作 比较耗时，一般创建时就布局好
+
+* 如可以将cell单独放到一个自定义类，初始化时就布局好
+
+### (3)提前计算并缓存cell的属性和内容
+
+* 当我们创建cell的数据源方法时，编译器并不是先创建cell 再定cell的高度
+
+* 而是先根据内容一次确定每一个cell的高度，高度确定后，再创建要显示的cell
+* 滚动时，每当cell进入屏幕都会计算高度，提前估算高度告诉编译器，编译器知道高度后，紧接着就会创建cell，这时再调用高度的具体计算方法，这样可以避免浪费时间去计算显示以外的cell
+
+### (4)减少cell中控件的数量
+
+* 尽量使cell得布局大致相同，不同风格的cell可以使用不用的重用标识符，初始化时添加控件
+
+### (5)不要使用ClearColor,无背景色,透明度也不要设置0
+
+* 渲染耗时比较长
+
+### (6)使用局部更新
+
+如果只是更新某组的话,使用`reloadRowsAtIndexPaths`或`reloadSections`代替`reloadData`进行局部更新
+
+### (7)加载网络数据,下载图片,使用异步加载,并缓存
+
+### (8)少使用`addSubview`给cell动态添加view
+
+### (9)按需加载cell,cell滚动很快时,只加载范围内cell
+
+```objective-c
+//按需加载 - 如果目标行与当前行相差超过指定行数，只在目标滚动范围的前后指定3行加载。
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    NSIndexPath *ip = [self indexPathForRowAtPoint:CGPointMake(0, targetContentOffset->y)];
+    NSIndexPath *cip = [[self indexPathsForVisibleRows] firstObject];
+    NSInteger skipCount = 8;
+    if (labs(cip.row-ip.row)>skipCount) {
+        NSArray *temp = [self indexPathsForRowsInRect:CGRectMake(0, targetContentOffset->y, self.width, self.height)];
+        NSMutableArray *arr = [NSMutableArray arrayWithArray:temp];
+        if (velocity.y<0) {
+            NSIndexPath *indexPath = [temp lastObject];
+            if (indexPath.row+33) {
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-3 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-2 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-1 inSection:0]];
+            }
+        }
+        [needLoadArr addObjectsFromArray:arr];
+    }
+}
+```
+
+记得在tableView:cellForRowAtIndexPath:方法中加入判断：
+
+```objective-c
+if (needLoadArr.count>0&&[needLoadArr indexOfObject:indexPath]==NSNotFound) {
+    [cell clear];
+    return;
+}
+```
+
+### (10)缓存高度
+
+**estimatedHeightForRow**不能和**HeightForRow里面的layoutIfNeed**同时存在，这两者同时存在才会出现“窜动”的bug。
+
+* 只要是**固定行高**就写**预估行高**来减少行高调用次数提升性能。
+* 如果是**动态行高**就不要写预估方法了，用一个行高的缓存字典来减少代码的调用次数即可
+
+## 12.category同名方法调用
 
 - Category 实际上是 Category_t的结构体，在运行时，新添加的方法，都被以倒序插入到原有方法列表的最前面，所以不同的Category，添加了同一个方法，执行的实际上是最后一个。
 - Category 在刚刚编译完的时候，和原来的类是分开的，只有在程序运行起来后，通过 Runtime ，Category 和原来的类才会合并到一起。
 
-## 9.AFNetworking证书
+## 13.AFNetworking证书
 
 `AFSecurityPolicy`**类配置**
 
@@ -199,7 +331,7 @@ Objective-C是动态语言，每个方法在运行时会被动态转为消息发
 
 * **validatesDomainName** 是否验证域名
 
-## 10.SDWebImage原理
+## 14.SDWebImage原理
 
 从内存中（字典）找图片（当这个图片在本次程序加载过），找到直接使用； 
 
