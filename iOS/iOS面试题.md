@@ -339,13 +339,41 @@ if (needLoadArr.count>0&&[needLoadArr indexOfObject:indexPath]==NSNotFound) {
 
 从网络上获取，使用，缓存到内存，缓存到沙盒。
 
+## 15.点击一个button的响应链
+
+* 设备将touch到的UITouch和UIEvent对象打包, 放到当前活动的Application的事件队列中
+
+* 单例的UIApplication会从事件队列中取出触摸事件并传递给单例UIWindow
+
+* UIWindow使用`hitTest:withEvent:`方法查找touch操作的所在的视图view
+
 ## 11.内存五大区域
 
 ![内存五大区域](http://api.cocoachina.com/uploads//20171129/1511922840354986.jpg)
 
 ![执行顺序](http://api.cocoachina.com/uploads//20171129/1511922856231877.jpg)
 
-# 三、Flutter层面
+# 三、Swift
+
+## 1.struct和class的区别
+
+### (1)类型不同
+
+**swift**中，**class是引用类型，struct是值类型**。值类型在**传递**和**赋值**时将进行复制，而引用类型则只会使用引用对象的一个"指向"。swift中 string,array,dictionary都是struct
+
+### (2)class有这几个功能struct没有的：
+
+- class可以继承，这样子类可以使用父类的特性和方法
+- 类型转换可以在runtime的时候检查和解释一个实例的类型
+- 可以用deinit来释放资源
+- 一个类可以被多次引用
+
+### (3)struct也有这样几个优势：
+
+- 结构较小，适用于复制操作，相比于一个class的实例被多次引用更加安全。
+- 无须担心内存memory leak或者多线程冲突问题
+
+# 四、Flutter层面
 
 ## 1.跨平台开发三个时代
 
