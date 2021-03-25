@@ -111,10 +111,58 @@ Runtime会对weak属性进行内存布局，构建hash表：以weak属性对象�
 - 如何手动触发KVO：在setter方法里，手动实现NSObject两个方法：willChangeValueForKey、didChangeValueForKey
 - swift的kvo：继承自NSObject的类，或者直接willset/didset实现。
 
-## 7.OC与Swift混编
+## 7.RunLoop
 
-- OC调用swift：import "工程名-swift.h” @objc
-- swift调用oc：桥接文件
+### (1)定义
+
+* `Runloop`是事件接收和分发机制的一个实现。
+
+* 是线程相关的基础框架的一部分。
+* 一个Runloop就是一个事件处理的循环，用来不停的调度工作及处理输入事件。
+
+### (2)什么时候使用
+
+当需要和线程交互的时候才会使用RunLoop
+
+### (3)Runloop Mode
+
+![Runloop Mode](https://upload-images.jianshu.io/upload_images/3986899-0db6f0838012fab3?imageMogr2/auto-orient/strip|imageView2/2/w/246/format/webp)
+
+Runloop在某一时刻只能跑在一个Mode下,处理该Mode中的Source,Timer和Observer
+
+* NSDefaultRunLoopMode
+* NSConnectionReplyMode
+* NSModalPanelRunLoopMode
+* NSEventTrackingRunLoopMode
+* NSRunLoopCommonModes
+
+iOS 中公开暴露出来的只有 `NSDefaultRunLoopMode` 和 `NSRunLoopCommonModes`。 `NSRunLoopCommonModes` 实际上是一个 Mode 的集合，默认包括 `NSDefaultRunLoopMode` 和 `NSEventTrackingRunLoopMode`。
+
+### (4)Source
+
+可以唤醒Runloop的一些事件
+
+* source0 : 非系统事件
+* source1 : 系统事件
+
+### (5)Observer
+
+可以监听runloop状态变化并作出一定的反应
+
+### (6)RunLoop运行流程
+
+![RunLoop运行流程](https://upload-images.jianshu.io/upload_images/3986899-f64f0601a3acb63d?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+
+### (7)RunLoop和线程有什么关系
+
+* 每条线程都有唯一的一个与之对应的RunLoop对象；
+
+* 主线程的RunLoop已经自动创建，子线程的RunLoop需要主动创建；
+* RunLoop在第一次获取时创建，在线程结束时销毁
+
+### (8)RunLoop的mode作用
+
+指定事件在运行循环中的优先级
 
 ## 8.并发编程
 
@@ -168,7 +216,7 @@ Objective-C是动态语言，每个方法在运行时会被动态转为消息发
 - objc在向一个对象发送消息时，runtime库会根据对象的isa指针找到该对象实际所属的类
 - 然后在该类中的方法列表以及其父类方法列表中寻找方法运行
 - 如果，在最顶层的父类（一般也就NSObject）中依然找不到相应的方法时，程序在运行时会挂掉并抛出异常unrecognized selector sent to XXX
-- 但是在这之前，objc的运行时会给出三次拯救程序崩溃的机会，这三次拯救程序奔溃的说明见问题《什么时候会报unrecognized selector的异常》中的说明。
+- 但是在这之前，objc的运行时会给出三次拯救程序崩溃的机会
 
 ### (4)什么时候会报unrecognized selector错误？iOS有哪些机制来避免走到这一步？
 
@@ -372,6 +420,11 @@ if (needLoadArr.count>0&&[needLoadArr indexOfObject:indexPath]==NSNotFound) {
 
 - 结构较小，适用于复制操作，相比于一个class的实例被多次引用更加安全。
 - 无须担心内存memory leak或者多线程冲突问题
+
+## 2.OC与Swift混编
+
+- OC调用swift：import "工程名-swift.h” @objc
+- swift调用oc：桥接文件
 
 # 四、Flutter层面
 
