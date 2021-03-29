@@ -405,11 +405,15 @@ if (needLoadArr.count>0&&[needLoadArr indexOfObject:indexPath]==NSNotFound) {
 
 ## 1.struct和class的区别
 
-### (1)类型不同
+### (1)相同点
 
-**swift**中，**class是引用类型，struct是值类型**。值类型在**传递**和**赋值**时将进行复制，而引用类型则只会使用引用对象的一个"指向"。swift中 string,array,dictionary都是struct
+- 都可以将多个数据封装成一个整体
 
-### (2)class有这几个功能struct没有的：
+### (2)不同点
+
+- 结构体只能封装数据,类不仅可以封装属性还可以封装方法
+- 结构体变量分配在栈空间,而对象分配在堆空间
+- **class是引用类型，struct是值类型**。值类型在**传递**和**赋值**时将进行复制，而引用类型则只会使用引用对象的一个"指向"。swift中 string,array,dictionary都是struct
 
 - class可以继承，这样子类可以使用父类的特性和方法
 - 类型转换可以在runtime的时候检查和解释一个实例的类型
